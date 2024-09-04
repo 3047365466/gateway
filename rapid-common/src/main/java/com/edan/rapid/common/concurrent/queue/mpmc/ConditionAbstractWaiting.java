@@ -33,7 +33,7 @@ public abstract class ConditionAbstractWaiting implements Condition {
      * <B>概要说明：</B>code below will block until test() returns false<BR>
      * @author  edan
      * @since 2021年12月7日 上午11:24:17
-     * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.Condition#test()
+     * @see com.edan.rapid.common.concurrent.queue.mpmc.Condition#test()
      */
     @Override
     public abstract boolean test();

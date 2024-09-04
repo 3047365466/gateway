@@ -1,6 +1,8 @@
 package com.edan.rapid.core.netty.processor;
 
 import com.edan.rapid.core.context.HttpRequestWrapper;
+import com.edan.rapid.core.context.RapidContext;
+import com.edan.rapid.core.helper.RequestHelper;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 
@@ -18,7 +20,7 @@ public class NettyCoreProcessor implements NettyProcessor {
 		ChannelHandlerContext ctx = event.getCtx();
 		try {
 			//	1. 解析FullHttpRequest, 把他转换为我们自己想要的内部对象：Context
-			System.out.println("test");
+			RapidContext context = RequestHelper.doContext(request, ctx);
 			//	2. 执行整个的过滤器逻辑：FilterChain
 			
 		} catch (Throwable t) {

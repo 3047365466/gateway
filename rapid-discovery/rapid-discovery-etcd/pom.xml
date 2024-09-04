@@ -12,9 +12,25 @@
     <artifactId>rapid-discovery-etcd</artifactId>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <rapid-discovery-api.version>1.0-SNAPSHOT</rapid-discovery-api.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.edan</groupId>
+            <artifactId>rapid-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.edan</groupId>
+            <artifactId>rapid-discovery-api</artifactId>
+            <version>${rapid-discovery-api.version}</version>
+        </dependency>
+        <!-- etcd jar -->
+        <dependency>
+            <groupId>io.etcd</groupId>
+            <artifactId>jetcd-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

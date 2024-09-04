@@ -13,7 +13,7 @@ public abstract class ConditionAbstractSpinning implements Condition {
 	 * <B>概要说明：</B>on spinning waiting breaking on test and expires > timeNow<BR>
 	 * @author  edan
 	 * @since 2021年12月7日 上午11:23:13
-	 * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.Condition#awaitNanos(long)
+	 * @see com.edan.rapid.common.concurrent.queue.mpmc.Condition#awaitNanos(long)
 	 */
     @Override
     public void awaitNanos(final long timeout) throws InterruptedException {
@@ -37,7 +37,7 @@ public abstract class ConditionAbstractSpinning implements Condition {
      * <B>概要说明：</B>on spinning waiting breaking on test<BR>
      * @author  edan
      * @since 2021年12月7日 上午11:23:38
-     * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.Condition#await()
+     * @see com.edan.rapid.common.concurrent.queue.mpmc.Condition#await()
      */
     @Override
     public void await() throws InterruptedException {

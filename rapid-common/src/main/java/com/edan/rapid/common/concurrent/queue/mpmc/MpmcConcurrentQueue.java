@@ -48,7 +48,7 @@ public class MpmcConcurrentQueue<E> implements ConcurrentQueue<E> {
      * <B>概要说明：</B>并发offer, 加入其尾部<BR>
      * @author  edan
      * @since 2021年12月7日 上午11:27:27
-     * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.ConcurrentQueue#offer(Object)
+     * @see com.edan.rapid.common.concurrent.queue.mpmc.ConcurrentQueue#offer(Object)
      */
     @Override
     public boolean offer(E e) {
@@ -87,7 +87,7 @@ public class MpmcConcurrentQueue<E> implements ConcurrentQueue<E> {
      * <B>概要说明：</B>并发poll, 从头部获取<BR>
      * @author  edan
      * @since 2021年12月7日 上午11:27:37
-     * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.ConcurrentQueue#poll()
+     * @see com.edan.rapid.common.concurrent.queue.mpmc.ConcurrentQueue#poll()
      */
     @Override
     public E poll() {

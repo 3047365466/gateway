@@ -19,7 +19,7 @@ abstract class ConditionAbstract implements Condition {
      * <B>概要说明：</B>wake me when the condition is satisfied, or timeout<BR>
      * @author  edan
      * @since 2021年12月7日 上午11:21:59
-     * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.Condition#awaitNanos(long)
+     * @see com.edan.rapid.common.concurrent.queue.mpmc.Condition#awaitNanos(long)
      */
     @Override
     public void awaitNanos(final long timeout) throws InterruptedException {
@@ -41,7 +41,7 @@ abstract class ConditionAbstract implements Condition {
      * <B>概要说明：</B>wake if signal is called, or wait indefinitely<BR>
      * @author  edan
      * @since 2021年12月7日 上午11:22:24
-     * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.Condition#await()
+     * @see com.edan.rapid.common.concurrent.queue.mpmc.Condition#await()
      */
     @Override
     public void await() throws InterruptedException {
@@ -61,7 +61,7 @@ abstract class ConditionAbstract implements Condition {
      * <B>概要说明：</B>tell threads waiting on condition to wake up<BR>
      * @author  edan
      * @since 2021年12月7日 上午11:22:36
-     * @see com.ruyuan.rapid.common.concurrent.queue.mpmc.Condition#signal()
+     * @see com.edan.rapid.common.concurrent.queue.mpmc.Condition#signal()
      */
     @Override
     public void signal() {

@@ -9,11 +9,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="rapid-core" />
         <module name="rapid-discovery-etcd" />
+        <module name="rapid-discovery-api" />
         <module name="rapid-client" />
         <module name="rapid-console" />
-        <module name="rapid-discovery-api" />
+        <module name="mvc" />
         <module name="rapid-common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rapid" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

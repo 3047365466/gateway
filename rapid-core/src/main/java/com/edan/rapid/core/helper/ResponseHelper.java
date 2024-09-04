@@ -2,6 +2,7 @@ package com.edan.rapid.core.helper;
 
 
 import com.edan.rapid.common.enums.ResponseCode;
+import com.edan.rapid.core.context.RapidResponse;
 import io.netty.buffer.Unpooled;
 import io.netty.handler.codec.http.*;
 
@@ -22,14 +23,13 @@ public class ResponseHelper {
 	 * @return FullHttpResponse
 	 */
 	public static FullHttpResponse getHttpResponse(ResponseCode responseCode) {
-		//	TODO: 目前还没有response对象, 我希望自己去创建出一个RapidResponse
-		String errorContent = "响应内部错误";
+		RapidResponse rapidResponse = RapidResponse.buildRapidResponse(responseCode);
 		DefaultFullHttpResponse httpResponse = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, 
 				HttpResponseStatus.INTERNAL_SERVER_ERROR,
-				Unpooled.wrappedBuffer(errorContent.getBytes()));
+				Unpooled.wrappedBuffer(rapidResponse.getContent().getBytes()));
 		
 		httpResponse.headers().set(HttpHeaderNames.CONTENT_TYPE, HttpHeaderValues.APPLICATION_JSON + ";charset=utf-8");
-		httpResponse.headers().set(HttpHeaderNames.CONTENT_LENGTH, errorContent.length());
+		httpResponse.headers().set(HttpHeaderNames.CONTENT_LENGTH, httpResponse.content().readableBytes());
 		return httpResponse;
 	}
 	

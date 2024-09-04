@@ -12,6 +12,7 @@
         <module>rapid-console</module>
         <module>rapid-core</module>
         <module>rapid-discovery</module>
+        <module>mvc</module>
     </modules>
     <properties>
         <netty.version>4.1.51.Final</netty.version>
@@ -35,8 +36,8 @@
 
         <!-- Build -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.source.version>17</java.source.version>
-        <java.target.version>17</java.target.version>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
         <java.encoding>UTF-8</java.encoding>
         <maven.compiler.version>3.8.0</maven.compiler.version>
         <maven.surefire.version>2.21.0</maven.surefire.version>
@@ -241,6 +242,11 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                    <basedir/>
+                    <buildDirectory/>
+                    <mainOutputDirectory/>
+                    <outputDirectory/>
+                    <projectArtifact/>
                 </configuration>
             </plugin>
         </plugins>
