@@ -16,42 +16,42 @@ public class ServiceInstance implements Serializable {
 	/**
 	 * 	服务实例ID: ip:port
 	 */
-	private String serviceInstanceId;
+	protected String serviceInstanceId;
 	
 	/**
 	 * 	服务定义唯一id： uniqueId
 	 */
-	private String uniqueId;
+	protected String uniqueId;
 	
 	/**
 	 * 	服务实例地址： ip:port
 	 */
-	private String address;
+	protected String address;
 	
 	/**
 	 * 	标签信息
 	 */
-	private String tags;
+	protected String tags;
 	
 	/**
 	 * 	权重信息
 	 */
-	private Integer weight;
+	protected Integer weight;
 	
 	/**
 	 * 	服务注册的时间戳：后面我们做负载均衡，warmup预热
 	 */
-	private long registerTime;
+	protected long registerTime;
 	
 	/**
 	 * 	服务实例启用禁用
 	 */
-	private boolean enable = true;
+	protected boolean enable = true;
 	
 	/**
 	 * 	服务实例对应的版本号
 	 */
-	private String version;
+	protected String version;
 
 	public ServiceInstance() {
 		super();

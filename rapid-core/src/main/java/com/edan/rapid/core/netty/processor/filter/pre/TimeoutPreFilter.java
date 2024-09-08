@@ -21,11 +21,11 @@ import lombok.Setter;
         value = ProcessorFilterType.PRE,
         order = ProcessorFilterConstants.TIMEOUT_PRE_FILTER_ORDER
 )
-public class TimeoutFilter extends AbstractEntryProcessorFilter<TimeoutFilter.Config> {
+public class TimeoutPreFilter extends AbstractEntryProcessorFilter<TimeoutPreFilter.Config> {
 
 
-    public TimeoutFilter() {
-        super(TimeoutFilter.Config.class);
+    public TimeoutPreFilter() {
+        super(TimeoutPreFilter.Config.class);
     }
 
     @Override

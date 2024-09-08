@@ -24,7 +24,11 @@ public class DynamicConfigManager {
 	
 	private DynamicConfigManager() {
 	}
-	
+
+	public Set<ServiceInstance> getServiceInstanceByUniqueId(String uniqueId) {
+		return serviceInstanceMap.get(uniqueId);
+	}
+
 	private static class SingletonHolder {
 		private static final DynamicConfigManager INSTANCE = new DynamicConfigManager();
 	}
@@ -59,6 +63,10 @@ public class DynamicConfigManager {
 		if (Objects.nonNull(set)) {
 			set.add(serviceInstance);
 		}
+	}
+
+	public void addServiceInstance(String uniqueId, Set<ServiceInstance> serviceInstanceSet) {
+		serviceInstanceMap.put(uniqueId, serviceInstanceSet);
 	}
 	
 	public void updateServiceInstance(String uniqueId, ServiceInstance serviceInstance) {

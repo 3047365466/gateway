@@ -1,4 +1,4 @@
-package com.ruyuan.rapid.etcd.core.test;
+package com.edan.rapid.etcd.core.test;
 
 import com.edan.rapid.etcd.api.EtcdClient;
 import com.edan.rapid.etcd.core.EtcdClientImpl;

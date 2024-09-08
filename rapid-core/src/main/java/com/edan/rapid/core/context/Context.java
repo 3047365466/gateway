@@ -197,6 +197,30 @@ public interface Context {
 	 * @since 2021年12月9日 上午2:30:41
 	 */
 	void invokeCompletedCallback();
+
+
+	/**
+	 * 	SR(Server[Rapid-Core] Received):	网关服务器接收到网络请求
+	 * 	SS(Server[Rapid-Core] Send):		网关服务器写回请求
+	 * 	RS(Route Send):						网关客户端发送请求
+	 * 	RR(Route Received): 				网关客户端收到请求
+	 */
+
+	long getSRTime();
+
+	void setSRTime(long sRTime);
+
+	long getSSTime();
+
+	void setSSTime(long sSTime);
+
+	long getRSTime();
+
+	void setRSTime(long rSTime);
+
+	long getRRTime();
+
+	void setRRTime(long rRTime);
 	
 	
 	

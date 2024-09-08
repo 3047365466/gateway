@@ -20,10 +20,12 @@ public class RapidConfig {
     private String rapidId = NetUtils.getLocalIp() + BasicConst.COLON_SEPARATOR + port;
 
     //	网关的注册中心地址
-    private String registerAddress = "http://192.168.11.114:2379,http://192.168.11.115:2379,http://192.168.11.116:2379";
+    private String registryAddress = "http://47.98.231.200:2379";
 
     //	网关的命名空间：dev test prod
-    private String nameSpace = "rapid-dev";
+    private String namespace = "rapid-dev";
+
+    private String env = "dev";
 
     //	网关服务器的CPU核数映射的线程数
     private int processThread = Runtime.getRuntime().availableProcessors();
@@ -57,6 +59,18 @@ public class RapidConfig {
 
     //	网关队列：阻塞/等待策略
     private String waitStrategy = "blocking";
+
+    //	默认请求超时时间 3s
+    private long requestTimeout = 3000;
+
+    //	默认路由转发的慢调用时间 2s
+    private long routeTimeout = 2000;
+
+    //	kafka地址
+    private String kafkaAddress = "";//"192.168.11.51:9092";
+
+    //	网关服务指标消息主题
+    private String metricTopic = "rapid-metric-topic";
     public WaitStrategy getTrueWaitStrategy() {
         switch (waitStrategy) {
             case "blocking" :

@@ -1,6 +1,7 @@
 package com.edan.rapid.core.netty.processor.filter;
 
 import com.edan.rapid.core.context.Context;
+import com.edan.rapid.core.helper.ResponseHelper;
 
 /**
  * <B>主类名称：</B>AbstractLinkedProcessorFilter<BR>
@@ -15,6 +16,15 @@ public abstract class AbstractLinkedProcessorFilter<T> implements ProcessorFilte
 	
 	@Override
 	public void fireNext(Context ctx, Object... args) throws Throwable {
+
+		// 上下文生命周期
+		if (ctx.isTerminated()) {
+			return;
+		}
+
+		if (ctx.isWrittened()) {
+			ResponseHelper.writeResponse(ctx);
+		}
 		
 		if(next != null) {
 			if(!next.check(ctx)) {

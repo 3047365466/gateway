@@ -30,9 +30,9 @@ public enum ResponseCode {
     DUBBO_RESPONSE_ERROR(HttpResponseStatus.INTERNAL_SERVER_ERROR, 10029, "服务返回异常"),
     VERIFICATION_FAILED(HttpResponseStatus.BAD_REQUEST,10030, "请求参数校验失败"),
     BLACKLIST(HttpResponseStatus.FORBIDDEN,10004, "请求IP在黑名单"),
-    WHITELIST(HttpResponseStatus.FORBIDDEN,10005, "请求IP不在白名单")
-    
-    ;
+    WHITELIST(HttpResponseStatus.FORBIDDEN,10005, "请求IP不在白名单"),
+
+    REQUEST_TIMEOUT(HttpResponseStatus.GATEWAY_TIMEOUT, 10007, "连接下游服务超时");
 
     private HttpResponseStatus status;
     private int code;

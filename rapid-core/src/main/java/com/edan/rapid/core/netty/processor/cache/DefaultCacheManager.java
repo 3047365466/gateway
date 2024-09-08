@@ -2,6 +2,7 @@ package com.edan.rapid.core.netty.processor.cache;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
+import org.apache.dubbo.rpc.service.GenericService;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -85,6 +86,17 @@ public class DefaultCacheManager {
 	 */
 	public void cleanAll() {
 		cacheMap.values().forEach(cache -> cache.invalidateAll());
+	}
+
+	/**
+	 * <B>方法名称：</B>createForDubboGenericService<BR>
+	 * <B>概要说明：</B>createForDubboGenericService<BR>
+	 * @author JiFeng
+	 * @since 2021年12月20日 下午8:21:56
+	 * @return
+	 */
+	public static Cache<String, GenericService> createForDubboGenericService() {
+		return Caffeine.newBuilder().build();
 	}
 	
 }

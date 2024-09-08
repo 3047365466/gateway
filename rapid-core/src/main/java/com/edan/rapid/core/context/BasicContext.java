@@ -1,6 +1,8 @@
 package com.edan.rapid.core.context;
 
 import io.netty.channel.ChannelHandlerContext;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,6 +17,8 @@ import java.util.function.Consumer;
  * @author JiFeng
  * @since 2021年12月9日 上午11:12:49
  */
+@Getter
+@Setter
 public abstract class BasicContext implements Context {
 
 	protected final String protocol;
@@ -37,6 +41,14 @@ public abstract class BasicContext implements Context {
 	
 	//	存放回调函数的集合
 	protected List<Consumer<Context>> completedCallbacks;
+
+	protected long SRTime;
+
+	protected long SSTime;
+
+	protected long RSTime;
+
+	protected long RRTime;
 	
 	public BasicContext(String protocol, ChannelHandlerContext nettyCtx, boolean keepAlive) {
 		this.protocol = protocol;
