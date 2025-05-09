@@ -18,8 +18,8 @@ import javax.servlet.Servlet;
 /**
  * <B>主类名称：</B>RapidClientAutoConfiguration<BR>
  * <B>概要说明：</B>SpringBoot自动装配加载类<BR>
- * @author JiFeng
- * @since 2021年12月18日 上午1:44:08
+ * @author edan
+ * @since 2024年8月18日 上午1:44:08
  */
 @Configuration
 @EnableConfigurationProperties(RapidProperties.class)

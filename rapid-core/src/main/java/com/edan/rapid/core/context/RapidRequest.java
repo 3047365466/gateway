@@ -20,8 +20,8 @@ import java.util.*;
 /**
  * <B>主类名称：</B>RapidRequest<BR>
  * <B>概要说明：</B>核心请求自定义实现<BR>
- * @author JiFeng
- * @since 2021年12月9日 下午12:28:35
+ * @author edan
+ * @since 2024年8月9日 下午12:28:35
  */
 @Slf4j
 public class RapidRequest implements RapidRequestMutable {
@@ -176,8 +176,8 @@ public class RapidRequest implements RapidRequestMutable {
 	/**
 	 * <B>方法名称：</B>getBody<BR>
 	 * <B>概要说明：</B>获取body信息<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午1:14:21
+	 * @author edan
+	 * @since 2024年8月9日 下午1:14:21
 	 * @return
 	 */
 	public String getBody() {
@@ -190,8 +190,8 @@ public class RapidRequest implements RapidRequestMutable {
 	/**
 	 * <B>方法名称：</B>getCookie<BR>
 	 * <B>概要说明：</B>获取指定的cookie<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午1:17:32
+	 * @author edan
+	 * @since 2024年8月9日 下午1:17:32
 	 * @param name
 	 * @return Cookie
 	 */
@@ -210,8 +210,8 @@ public class RapidRequest implements RapidRequestMutable {
 	/**
 	 * <B>方法名称：</B>getQueryParametersMultiple<BR>
 	 * <B>概要说明：</B>获取指定名称的参数值<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午1:19:03
+	 * @author edan
+	 * @since 2024年8月9日 下午1:19:03
 	 * @param name 
 	 * @return 
 	 */

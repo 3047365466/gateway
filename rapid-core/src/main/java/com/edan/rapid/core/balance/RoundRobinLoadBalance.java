@@ -19,9 +19,9 @@ public class RoundRobinLoadBalance extends AbstractLoadBalance {
     /**
      * <B>方法名称：</B>doSelect<BR>
      * <B>概要说明：</B>doSelect<BR>
-     * @author  hezhuo.Bai-JiFeng
-     * @since 2021年11月24日 下午4:38:33
-     * @see com.bfxy.rapid.core.balance.AbstractLoadBalance#doSelect(com.bfxy.rapid.core.context.RapidContext, List)
+     * @author  hezhuo.Bai-edan
+     * @since 2024年8月24日 下午4:38:33
+     * @see com.edan.rapid.core.balance.AbstractLoadBalance#doSelect(com.edan.rapid.core.context.RapidContext, List)
      */
     @Override
     protected ServiceInstance doSelect(RapidContext context, List<ServiceInstance> instances) {
@@ -79,8 +79,8 @@ public class RoundRobinLoadBalance extends AbstractLoadBalance {
     /**
      * <B>主类名称：</B>WeightedRoundRobin<BR>
      * <B>概要说明：</B>权重缓存对象<BR>
-     * @author hezhuo.Bai-JiFeng
-     * @since 2021年11月24日 下午4:37:37
+     * @author hezhuo.Bai-edan
+     * @since 2024年8月24日 下午4:37:37
      */
     protected static class WeightedRoundRobin {
         //	实例权重

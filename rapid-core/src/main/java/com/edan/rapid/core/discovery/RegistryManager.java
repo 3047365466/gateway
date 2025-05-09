@@ -20,8 +20,8 @@ import java.util.concurrent.CountDownLatch;
 /**
  * <B>主类名称：</B>RegistryManager<BR>
  * <B>概要说明：</B>网关服务的注册中心管理类<BR>
- * @author JiFeng
- * @since 2021年12月19日 下午9:21:39
+ * @author edan
+ * @since 2024年8月19日 下午9:21:39
  */
 @Slf4j
 public class RegistryManager {
@@ -98,8 +98,8 @@ public class RegistryManager {
 	 * 				/hello:1.0.0/192.168.11.100:1234
 	 * 				/hello:1.0.0/192.168.11.101:4321
 	 * 					
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午9:35:00
+	 * @author edan
+	 * @since 2024年8月19日 下午9:35:00
 	 */
 	private synchronized void subscribeService() {
 		log.info("#RegistryManager#subscribeService  ------------ 	服务订阅开始 	---------------");
@@ -172,8 +172,8 @@ public class RegistryManager {
 	/**
 	 * <B>方法名称：</B>parseServiceDefinition<BR>
 	 * <B>概要说明：</B>把从注册中心拉取过来的json字符串 转换成指定的ServiceDefinition<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午10:02:51
+	 * @author edan
+	 * @since 2024年8月19日 下午10:02:51
 	 * @param definitionJson
 	 * @return ServiceDefinition
 	 */
@@ -304,8 +304,8 @@ public class RegistryManager {
 	/**
 	 * <B>主类名称：</B>RegistryServer<BR>
 	 * <B>概要说明：</B>网关自身注册服务<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午11:21:45
+	 * @author edan
+	 * @since 2024年8月19日 下午11:21:45
 	 */
 	class RegistryServer {
 		

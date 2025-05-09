@@ -3,14 +3,22 @@ package com.edan.rapid.common.constants;
 /**
  * <B>主类名称：</B>ProcessorFilterConstants<BR>
  * <B>概要说明：</B>所有过滤器常量配置定义<BR>
- * @author JiFeng
- * @since 2021年12月17日 上午12:35:39
+ * @author edan
+ * @since 2024年8月17日 上午12:35:39
  */
 public interface ProcessorFilterConstants {
+
+	String LIMIT_GLOBAL_FILTER_ID = "limitGlobalFilter";
+	String LIMIT_GLOBAL_FILTER_NAME = "全局限流过滤器";
+	int LIMIT_GLOBAL_FILTER_ORDER = 1000;
 
 	String LOADBALANCE_PRE_FILTER_ID = "loadBalancePreFilter";
 	String LOADBALANCE_PRE_FILTER_NAME = "负载均衡前置过滤器";
 	int LOADBALANCE_PRE_FILTER_ORDER = 2000;
+
+	String LIMIT_PRE_FILTER_ID = "limitPreFilter";
+	String LIMIT_PRE_FILTER_NAME = "自定义限流前置过滤器";
+	int LIMIT_PRE_FILTER_ORDER = 2050;
 
 
 	String TIMEOUT_PRE_FILTER_ID = "timeoutPreFilter";
@@ -35,5 +43,5 @@ public interface ProcessorFilterConstants {
 	String STATISTICS_POST_FILTER_ID = "statisticsPostFilter";
 	String STATISTICS_POST_FILTER_NAME = "最后的统计分析过滤器";
 	int STATISTICS_POST_FILTER_ORDER = Integer.MAX_VALUE;
-	
+
 }

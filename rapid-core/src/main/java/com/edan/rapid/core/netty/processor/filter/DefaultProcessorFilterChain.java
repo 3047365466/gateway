@@ -5,8 +5,8 @@ import com.edan.rapid.core.context.Context;
 /**
  * <B>主类名称：</B>DefaultProcessorFilterChain<BR>
  * <B>概要说明：</B>最终的链表实现类<BR>
- * @author JiFeng
- * @since 2021年12月14日 上午1:46:37
+ * @author edan
+ * @since 2024年8月14日 上午1:46:37
  */
 public class DefaultProcessorFilterChain extends ProcessorFilterChain<Context> {
 

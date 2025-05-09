@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
  * <B>主类名称：</B>NettyMpmcProcessor<BR>
  * <B>概要说明：</B>mpmc的核心实现处理器, 最终我们还是要使用NettyCoreProcessor<BR>
  * @author edan
- * @since 2021年12月5日 下午10:13:33
+ * @since 2024年8月5日 下午10:13:33
  */
 @Slf4j
 public class NettyMpmcProcessor implements NettyProcessor {

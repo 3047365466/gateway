@@ -26,8 +26,8 @@ import java.util.Set;
 /**
  * <B>主类名称：</B>Dubbo27ClientRegisteryManager<BR>
  * <B>概要说明：</B>dubbo 2.7.x 客户端注册管理类实现<BR>
- * @author JiFeng
- * @since 2021年12月19日 上午11:18:55
+ * @author edan
+ * @since 2024年8月19日 上午11:18:55
  */
 @Slf4j
 public class Dubbo27ClientRegisteryManager extends AbstractClientRegisteryManager implements EnvironmentAware, ApplicationListener<ApplicationEvent> {
@@ -78,8 +78,8 @@ public class Dubbo27ClientRegisteryManager extends AbstractClientRegisteryManage
 	/**
 	 * <B>方法名称：</B>registeryServiceBean<BR>
 	 * <B>概要说明：</B>注册Dubbo服务：从ServiceBeanExportedEvent获取ServiceBean对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 上午11:27:08
+	 * @author edan
+	 * @since 2024年8月19日 上午11:27:08
 	 * @param serviceBean
 	 * @throws Exception 
 	 */

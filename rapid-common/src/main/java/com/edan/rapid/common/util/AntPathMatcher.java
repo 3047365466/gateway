@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * <B>/app/*.x	匹配(Matches)所有在app路径下的.x文件</B><BR>
  * <B>/app/p?ttern	匹配(Matches) /app/pattern 和 /app/pXttern,但是不包括/app/pttern</B><BR>
  * @author edan
- * @since 2021年12月5日 下午3:17:46
+ * @since 2024年8月5日 下午3:17:46
  */
 public class AntPathMatcher {
 

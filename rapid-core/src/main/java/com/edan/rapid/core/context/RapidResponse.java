@@ -10,8 +10,8 @@ import org.asynchttpclient.Response;
 /**
  * <B>主类名称：</B>RapidResponse<BR>
  * <B>概要说明：</B>网关响应封装类<BR>
- * @author JiFeng
- * @since 2021年12月9日 下午1:33:13
+ * @author edan
+ * @since 2024年8月9日 下午1:33:13
  */
 @Data
 public class RapidResponse {
@@ -37,8 +37,8 @@ public class RapidResponse {
 	/**
 	 * <B>方法名称：</B>putHeader<BR>
 	 * <B>概要说明：</B>设置响应头信息<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午1:36:39
+	 * @author edan
+	 * @since 2024年8月9日 下午1:36:39
 	 * @param key
 	 * @param val
 	 */
@@ -49,8 +49,8 @@ public class RapidResponse {
 	/**
 	 * <B>方法名称：</B>buildRapidResponse<BR>
 	 * <B>概要说明：</B>构建网关响应对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午1:40:27
+	 * @author edan
+	 * @since 2024年8月9日 下午1:40:27
 	 * @param org.asynchttpclient.Response futureResponse
 	 * @return RapidResponse
 	 */
@@ -64,8 +64,8 @@ public class RapidResponse {
 	/**
 	 * <B>方法名称：</B>buildRapidResponse<BR>
 	 * <B>概要说明：</B>返回一个json类型的响应信息，失败时候使用<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午1:49:02
+	 * @author edan
+	 * @since 2024年8月9日 下午1:49:02
 	 * @param code
 	 * @param args
 	 * @return RapidResponse
@@ -86,8 +86,8 @@ public class RapidResponse {
 	/**
 	 * <B>方法名称：</B>buildRapidResponseObj<BR>
 	 * <B>概要说明：</B>返回一个json类型的响应信息, 成功时候使用<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午1:55:36
+	 * @author edan
+	 * @since 2024年8月9日 下午1:55:36
 	 * @param data
 	 * @return
 	 */

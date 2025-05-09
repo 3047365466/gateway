@@ -5,8 +5,8 @@ import com.edan.rapid.common.enums.ResponseCode;
 /**
  * <B>主类名称：</B>RapidPathNoMatchedException<BR>
  * <B>概要说明：</B>请求路径不匹配的异常定义类<BR>
- * @author JiFeng
- * @since 2021年12月13日 下午10:48:59
+ * @author edan
+ * @since 2024年8月13日 下午10:48:59
  */
 public class RapidPathNoMatchedException extends RapidBaseException {
 

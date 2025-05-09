@@ -9,8 +9,8 @@ import java.lang.annotation.Target;
 /**
  * <B>主类名称：</B>RapidInvoker<BR>
  * <B>概要说明：</B>必须要在服务的方法上进行强制的声明.<BR>
- * @author JiFeng
- * @since 2021年12月18日 上午12:41:43
+ * @author edan
+ * @since 2024年8月18日 上午12:41:43
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
@@ -20,8 +20,8 @@ public @interface RapidInvoker {
 	/**
 	 * <B>方法名称：</B>path<BR>
 	 * <B>概要说明：</B>访问路径<BR>
-	 * @author JiFeng
-	 * @since 2021年12月18日 上午12:39:55
+	 * @author edan
+	 * @since 2024年8月18日 上午12:39:55
 	 * @return path
 	 */
 	String path();

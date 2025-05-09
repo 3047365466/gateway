@@ -90,4 +90,7 @@ public class RapidConfigLoader {
 		return rapidConfig;
 	}
 
+	public static void main(String[] args) {
+		RapidConfigLoader.getInstance().load(args);
+	}
 }

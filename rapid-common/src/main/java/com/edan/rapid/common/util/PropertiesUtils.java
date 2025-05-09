@@ -5,7 +5,7 @@ import java.util.Properties;
 
 public abstract class PropertiesUtils {
 
-    public static void properties2Object(final Properties p, final Object object, String prefix) {
+    public static void  properties2Object(final Properties p, final Object object, String prefix) {
         Method[] methods = object.getClass().getMethods();
         for (Method method : methods) {
             String mn = method.getName();

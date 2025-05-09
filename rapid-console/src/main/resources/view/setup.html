@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Console Setup</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2b9688;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #304156;
+            margin-top: 30px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .button {
+            display: inline-block;
+            background-color: #2b9688;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rapid Console Frontend Setup</h1>
+    <p>To properly set up the Rapid Console frontend, you need to download and place several JavaScript and CSS libraries in the correct directories.</p>
+    
+    <h2>Required Libraries</h2>
+    <table>
+        <tr>
+            <th>Library</th>
+            <th>Version</th>
+            <th>Download URL</th>
+            <th>Target Location</th>
+        </tr>
+        <tr>
+            <td>Vue.js</td>
+            <td>2.6.14</td>
+            <td><a href="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js">Download</a></td>
+            <td><code>js/vue.min.js</code></td>
+        </tr>
+        <tr>
+            <td>Vue Router</td>
+            <td>3.5.3</td>
+            <td><a href="https://cdn.jsdelivr.net/npm/vue-router@3.5.3/dist/vue-router.min.js">Download</a></td>
+            <td><code>js/vue-router.min.js</code></td>
+        </tr>
+        <tr>
+            <td>Axios</td>
+            <td>0.24.0</td>
+            <td><a href="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js">Download</a></td>
+            <td><code>js/axios.min.js</code></td>
+        </tr>
+        <tr>
+            <td>Element UI (JS)</td>
+            <td>2.15.7</td>
+            <td><a href="https://cdn.jsdelivr.net/npm/element-ui@2.15.7/lib/index.js">Download</a></td>
+            <td><code>js/element-ui.js</code></td>
+        </tr>
+        <tr>
+            <td>Element UI (CSS)</td>
+            <td>2.15.7</td>
+            <td><a href="https://cdn.jsdelivr.net/npm/element-ui@2.15.7/lib/theme-chalk/index.css">Download</a></td>
+            <td><code>css/element-ui.css</code></td>
+        </tr>
+    </table>
+    
+    <h2>Directory Structure</h2>
+    <p>Make sure your directory structure looks like this:</p>
+    <pre>
+view/
+├── assets/
+│   └── logo.svg
+├── css/
+│   ├── element-ui.css
+│   └── main.css
+├── js/
+│   ├── api.js
+│   ├── axios.min.js
+│   ├── components/
+│   │   ├── RuleManagement.js
+│   │   └── ServiceManagement.js
+│   ├── element-ui.js
+│   ├── main.js
+│   ├── vue.min.js
+│   └── vue-router.min.js
+├── index.html
+├── README.md
+└── setup.html
+    </pre>
+    
+    <h2>Setup Instructions</h2>
+    <ol>
+        <li>Download all required libraries from the links above</li>
+        <li>Create the directory structure shown above</li>
+        <li>Place each downloaded file in its target location</li>
+        <li>Access the application at <code>http://localhost:9005/</code> (or your configured port)</li>
+    </ol>
+    
+    <a href="index.html" class="button">Go to Application</a>
+</body>
+</html> 

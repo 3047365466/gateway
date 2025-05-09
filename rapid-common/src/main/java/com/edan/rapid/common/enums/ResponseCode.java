@@ -3,14 +3,19 @@ package com.edan.rapid.common.enums;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import lombok.Getter;
 
-
+/**
+ * <B>主类名称：</B>ResponseCode<BR>
+ * <B>概要说明：</B>响应码枚举<BR>
+ * @author edan
+ * @since 2024年8月21日
+ */
 @Getter
 public enum ResponseCode {
 
     SUCCESS(HttpResponseStatus.OK, 0, "成功"),
     INTERNAL_ERROR(HttpResponseStatus.INTERNAL_SERVER_ERROR, 1000, "网关内部错误"),
     SERVICE_UNAVAILABLE(HttpResponseStatus.SERVICE_UNAVAILABLE, 2000, "服务暂时不可用,请稍后再试"),
-    
+
     REQUEST_PARSE_ERROR(HttpResponseStatus.BAD_REQUEST, 10000, "请求解析错误, header中必须存在uniqueId参数"),
     REQUEST_PARSE_ERROR_NO_UNIQUEID(HttpResponseStatus.BAD_REQUEST, 10001, "请求解析错误, header中必须存在uniqueId参数"),
     PATH_NO_MATCHED(HttpResponseStatus.NOT_FOUND,10002, "没有找到匹配的路径, 请求快速失败"),
@@ -32,7 +37,13 @@ public enum ResponseCode {
     BLACKLIST(HttpResponseStatus.FORBIDDEN,10004, "请求IP在黑名单"),
     WHITELIST(HttpResponseStatus.FORBIDDEN,10005, "请求IP不在白名单"),
 
-    REQUEST_TIMEOUT(HttpResponseStatus.GATEWAY_TIMEOUT, 10007, "连接下游服务超时");
+    REQUEST_TIMEOUT(HttpResponseStatus.GATEWAY_TIMEOUT, 10007, "连接下游服务超时"),
+    REQUEST_LIMITED(HttpResponseStatus.SERVICE_UNAVAILABLE, 10008, "网关请求超限,请稍后再试"),
+
+    /**
+     * 请求被限流
+     */
+    RATE_LIMITED(HttpResponseStatus.TOO_MANY_REQUESTS, 429, "请求被限流，请稍后重试");
 
     private HttpResponseStatus status;
     private int code;

@@ -3,8 +3,8 @@ package com.edan.rapid.common.config;
 /**
  * <B>主类名称：</B>DubboServiceInvoker<BR>
  * <B>概要说明：</B>dubbo协议的注册服务调用模型类<BR>
- * @author JiFeng
- * @since 2021年12月11日 上午12:25:28
+ * @author edan
+ * @since 2024年8月11日 上午12:25:28
  */
 public class DubboServiceInvoker extends AbstractServiceInvoker {
 	

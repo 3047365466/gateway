@@ -24,8 +24,8 @@ import java.util.concurrent.CompletableFuture;
 /**
  * <B>主类名称：</B>HttpRouteFilter<BR>
  * <B>概要说明：</B>请求路由的中置过滤器<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午4:54:36
+ * @author edan
+ * @since 2024年8月20日 下午4:54:36
  */
 @Filter(
 		id = ProcessorFilterConstants.HTTP_ROUTE_FILTER_ID,
@@ -71,8 +71,8 @@ public class HttpRouteFilter extends AbstractEntryProcessorFilter<FilterConfig> 
 	/**
 	 * <B>方法名称：</B>complete<BR>
 	 * <B>概要说明：</B>真正执行请求响应回来的操作方法<BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 下午5:02:06
+	 * @author edan
+	 * @since 2024年8月20日 下午5:02:06
 	 * @param request
 	 * @param response
 	 * @param throwable

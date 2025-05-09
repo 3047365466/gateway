@@ -7,7 +7,7 @@ import java.util.concurrent.locks.LockSupport;
  * <B>主类名称：</B>ConditionAbstractWaiting<BR>
  * <B>概要说明：</B>abstract condition supporting common condition code<BR>
  * @author edan
- * @since 2021年12月7日 上午11:24:02
+ * @since 2024年8月7日 上午11:24:02
  */
 public abstract class ConditionAbstractWaiting implements Condition {
 
@@ -32,7 +32,7 @@ public abstract class ConditionAbstractWaiting implements Condition {
      * <B>方法名称：</B>test<BR>
      * <B>概要说明：</B>code below will block until test() returns false<BR>
      * @author  edan
-     * @since 2021年12月7日 上午11:24:17
+     * @since 2024年8月7日 上午11:24:17
      * @see com.edan.rapid.common.concurrent.queue.mpmc.Condition#test()
      */
     @Override

@@ -6,8 +6,8 @@ import com.edan.rapid.core.helper.ResponseHelper;
 /**
  * <B>主类名称：</B>AbstractLinkedProcessorFilter<BR>
  * <B>概要说明：</B>抽象的带有链表形式的过滤器<BR>
- * @author JiFeng
- * @since 2021年12月14日 上午1:03:25
+ * @author edan
+ * @since 2024年8月14日 上午1:03:25
  */
 public abstract class AbstractLinkedProcessorFilter<T> implements ProcessorFilter<Context> {
 

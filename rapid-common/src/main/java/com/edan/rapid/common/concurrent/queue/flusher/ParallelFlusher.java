@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  * <B>主类名称：</B>ParallelFlusher<BR>
  * <B>概要说明：</B>并行的Flusher多生产者多消费者工具类，基于disruptor<BR>
  * @author edan
- * @since 2021年12月7日 上午1:42:55
+ * @since 2024年8月7日 上午1:42:55
  */
 public class ParallelFlusher<E> implements Flusher<E> {
 
@@ -165,7 +165,7 @@ public class ParallelFlusher<E> implements Flusher<E> {
      * <B>主类名称：</B>Builder<BR>
      * <B>概要说明：</B>建造者模型, 目的就是为了设置真实对象的属性，在创建真实对象的时候透传过去<BR>
      * @author edan
-     * @since 2021年12月7日 上午2:07:01
+     * @since 2024年8月7日 上午2:07:01
      */
     public static class Builder<E> {
 

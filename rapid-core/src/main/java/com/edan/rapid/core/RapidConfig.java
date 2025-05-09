@@ -3,7 +3,11 @@ package com.edan.rapid.core;
 import com.edan.rapid.common.constants.BasicConst;
 import com.edan.rapid.common.constants.RapidBufferHelper;
 import com.edan.rapid.common.util.NetUtils;
-import com.lmax.disruptor.*;
+import com.lmax.disruptor.BlockingWaitStrategy;
+import com.lmax.disruptor.BusySpinWaitStrategy;
+import com.lmax.disruptor.SleepingWaitStrategy;
+import com.lmax.disruptor.WaitStrategy;
+import com.lmax.disruptor.YieldingWaitStrategy;
 import lombok.Data;
 
 /**
@@ -105,5 +109,40 @@ public class RapidConfig {
 
     //	客户端空闲连接超时时间, 默认60秒
     private int httpPooledConnectionIdleTimeout = 60 * 1000;
+
+    // Redis配置
+    private String redisHost = "117.50.121.62";
+
+    private int redisPort = 6379;
+
+    private String redisPassword = "tdk2580TDK";
+
+    private boolean redisEnabled = false;
+
+    // Redis哨兵模式配置
+    private boolean redisSentinelEnabled = true;
+
+    private String redisMasterName = "master";
+
+    // 哨兵节点列表，格式：host1:port1,host2:port2,host3:port3
+    private String redisSentinels = "117.50.121.62:26379,111.229.152.195:26379,47.98.231.200:26379";
+
+    private int redisDatabase = 0;
+
+    // Getters and setters for rate limiting
+    // 限流器配置
+
+    private String rateLimiterType = "REDIS_SENTINEL"; // 可选值: LOCAL, REDIS, REDIS_SENTINEL
+
+    // 全局限流相关配置
+
+    private boolean limitEnabled = true;
+    private String limitKeyPrefix = "rate_limit:";
+    private String limitAlgorithm = "TOKEN_BUCKET";
+    private int limitMaxTokens = 100;
+    private int limitTokensPerSecond = 10;
+    private int limitMaxRequests = 100;
+    private int limitWindowSize = 60;
+    private String limitMessage = "Too many requests, please try again later";
 
 }

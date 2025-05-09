@@ -24,8 +24,8 @@ import java.util.concurrent.CompletableFuture;
 /**
  * <B>主类名称：</B>DubboRouteFilter<BR>
  * <B>概要说明：</B>DubboRouteFilter<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午9:57:03
+ * @author edan
+ * @since 2024年8月20日 下午9:57:03
  */
 @Filter(
 		id = ProcessorFilterConstants.DUBBO_ROUTE_FILTER_ID,
@@ -96,8 +96,8 @@ public class DubboRouteFilter extends AbstractEntryProcessorFilter<FilterConfig>
 	/**
 	 * <B>方法名称：</B>complete<BR>
 	 * <B>概要说明：</B>回调响应处理实现<BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 下午9:51:59
+	 * @author edan
+	 * @since 2024年8月20日 下午9:51:59
 	 * @param dubboServiceInvoker
 	 * @param response
 	 * @param throwable

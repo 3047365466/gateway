@@ -25,8 +25,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 /**
  * <B>主类名称：</B>StatisticsPostFilter<BR>
  * <B>概要说明：</B>后置过滤器：统计分析<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午11:35:37
+ * @author edan
+ * @since 2024年8月20日 下午11:35:37
  */
 @Filter(
 		id = ProcessorFilterConstants.STATISTICS_POST_FILTER_ID,

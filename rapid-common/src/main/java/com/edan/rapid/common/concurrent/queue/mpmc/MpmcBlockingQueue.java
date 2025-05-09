@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * <B>主类名称：</B>MpmcBlockingQueue<BR>
  * <B>概要说明：</B>多生产者多消费者阻塞队列<BR>
  * @author edan
- * @since 2021年12月7日 上午11:25:44
+ * @since 2024年8月7日 上午11:25:44
  */
 public final class MpmcBlockingQueue<E> extends MpmcConcurrentQueue<E> implements Serializable, Iterable<E>, Collection<E>, BlockingQueue<E>, Queue<E>, ConcurrentQueue<E> {
 
@@ -96,7 +96,7 @@ public final class MpmcBlockingQueue<E> extends MpmcConcurrentQueue<E> implement
      * <B>方法名称：</B>put<BR>
      * <B>概要说明：</B>等待<BR>
      * @author  edan
-     * @since 2021年12月8日 下午11:54:39
+     * @since 2024年8月8日 下午11:54:39
      * @see BlockingQueue#put(Object)
      */
     @Override
@@ -128,7 +128,7 @@ public final class MpmcBlockingQueue<E> extends MpmcConcurrentQueue<E> implement
      * <B>方法名称：</B>take<BR>
      * <B>概要说明：</B>等待<BR>
      * @author  edan
-     * @since 2021年12月8日 下午11:54:56
+     * @since 2024年8月8日 下午11:54:56
      * @see BlockingQueue#take()
      */
     @Override

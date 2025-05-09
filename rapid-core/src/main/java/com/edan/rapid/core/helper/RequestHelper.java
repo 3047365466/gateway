@@ -29,8 +29,8 @@ import java.util.Map;
 /**
  * <B>主类名称：</B>RequestHelper<BR>
  * <B>概要说明：</B>解析请求信息，构建上下文对象<BR>
- * @author JiFeng
- * @since 2021年12月10日 下午10:57:23
+ * @author edan
+ * @since 2024年8月10日 下午10:57:23
  */
 public class RequestHelper {
 	
@@ -39,8 +39,8 @@ public class RequestHelper {
 	/**
 	 * <B>方法名称：</B>doContext<BR>
 	 * <B>概要说明：</B>解析FullHttpRequest 构建RapidContext核心构建方法<BR>
-	 * @author JiFeng
-	 * @since 2021年12月10日 下午10:58:53
+	 * @author edan
+	 * @since 2024年8月10日 下午10:58:53
 	 * @param request
 	 * @param ctx
 	 * @return RapidContext
@@ -81,8 +81,8 @@ public class RequestHelper {
 	/**
 	 * <B>方法名称：</B>doRequest<BR>
 	 * <B>概要说明：</B>构建RapidRequest请求对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月10日 下午11:07:40
+	 * @author edan
+	 * @since 2024年8月10日 下午11:07:40
 	 * @param fullHttpRequest
 	 * @param ctx
 	 * @return RapidRequest
@@ -120,8 +120,8 @@ public class RequestHelper {
 	/**
 	 * <B>方法名称：</B>getClientIp<BR>
 	 * <B>概要说明：</B>获取客户端ip<BR>
-	 * @author JiFeng
-	 * @since 2021年12月10日 下午11:19:21
+	 * @author edan
+	 * @since 2024年8月10日 下午11:19:21
 	 * @param ctx
 	 * @param request
 	 * @return ClientIp
@@ -146,8 +146,8 @@ public class RequestHelper {
 	/**
 	 * <B>方法名称：</B>getServiceDefinition<BR>
 	 * <B>概要说明：</B>通过请求对象获取服务资源信息<BR>
-	 * @author JiFeng
-	 * @since 2021年12月11日 上午12:58:05
+	 * @author edan
+	 * @since 2024年8月11日 上午12:58:05
 	 * @param rapidRequest
 	 * @return ServiceDefinition
 	 */
@@ -164,8 +164,8 @@ public class RequestHelper {
 	/**
 	 * <B>方法名称：</B>getServiceInvoker<BR>
 	 * <B>概要说明：</B>根据请求对象和服务定义对象获取对应的ServiceInvoke<BR>
-	 * @author JiFeng
-	 * @since 2021年12月13日 下午10:57:51
+	 * @author edan
+	 * @since 2024年8月13日 下午10:57:51
 	 * @param rapidRequest
 	 * @param serviceDefinition
 	 */
@@ -181,8 +181,8 @@ public class RequestHelper {
 	/**
 	 * <B>方法名称：</B>putContext<BR>
 	 * <B>概要说明：</B>设置必要的上下文方法<BR>
-	 * @author JiFeng
-	 * @since 2021年12月13日 下午11:04:34
+	 * @author edan
+	 * @since 2024年8月13日 下午11:04:34
 	 * @param rapidContext
 	 * @param serviceInvoker
 	 */

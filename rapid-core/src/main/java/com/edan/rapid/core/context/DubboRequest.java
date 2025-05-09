@@ -6,8 +6,8 @@ import lombok.Setter;
 /**
  * <B>主类名称：</B>DubboRequest<BR>
  * <B>概要说明：</B>DubboRequest<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午8:22:35
+ * @author edan
+ * @since 2024年8月20日 下午8:22:35
  */
 @Getter
 @Setter

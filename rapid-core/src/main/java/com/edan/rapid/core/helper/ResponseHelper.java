@@ -16,7 +16,7 @@ import java.util.Objects;
  * <B>主类名称：</B>ResponseHelper<BR>
  * <B>概要说明：</B>响应的辅助类<BR>
  * @author edan
- * @since 2021年12月8日 下午9:53:15
+ * @since 2024年8月8日 下午9:53:15
  */
 public class ResponseHelper {
 
@@ -24,7 +24,7 @@ public class ResponseHelper {
 	 * <B>方法名称：</B>getHttpResponse<BR>
 	 * <B>概要说明：</B>获取响应对象<BR>
 	 * @author edan
-	 * @since 2021年12月8日 下午10:01:43
+	 * @since 2024年8月8日 下午10:01:43
 	 * @param responseCode
 	 * @return FullHttpResponse
 	 */

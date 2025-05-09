@@ -20,8 +20,8 @@ import java.util.Map;
 /**
  * <B>主类名称：</B>RapidAnnotationScanner<BR>
  * <B>概要说明：</B>注解扫描类, 用于扫描所有的用户定义的 @RapidService 和 @RapidInvoker<BR>
- * @author JiFeng
- * @since 2021年12月18日 上午1:01:31
+ * @author edan
+ * @since 2024年8月18日 上午1:01:31
  */
 public class RapidAnnotationScanner {
 
@@ -39,8 +39,8 @@ public class RapidAnnotationScanner {
 	/**
 	 * <B>方法名称：</B>scanbuilder<BR>
 	 * <B>概要说明：</B>扫描传入的Bean对象，最终返回一个ServiceDefinition<BR>
-	 * @author JiFeng
-	 * @since 2021年12月18日 上午1:06:50
+	 * @author edan
+	 * @since 2024年8月18日 上午1:06:50
 	 * @param bean
 	 * @param args 额外的参数选项：注册dubbo时需要使用ServiceBean
 	 * @return ServiceDefinition
@@ -49,7 +49,7 @@ public class RapidAnnotationScanner {
 		
 		Class<?> clazz = bean.getClass();
 		boolean isPresent = clazz.isAnnotationPresent(RapidService.class);
-		
+		// todo 实现服务接口和规则的绑定
 		if(isPresent) {
 			RapidService rapidService = clazz.getAnnotation(RapidService.class);
 			String serviceId = rapidService.serviceId();
@@ -106,8 +106,8 @@ public class RapidAnnotationScanner {
 	/**
 	 * <B>方法名称：</B>createHttpServiceInvoker<BR>
 	 * <B>概要说明：</B>构建HttpServiceInvoker对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月18日 上午1:19:33
+	 * @author edan
+	 * @since 2024年8月18日 上午1:19:33
 	 * @param path
 	 * @param bean
 	 * @param method 
@@ -122,10 +122,10 @@ public class RapidAnnotationScanner {
 	/**
 	 * <B>方法名称：</B>createDubboServiceInvoker<BR>
 	 * <B>概要说明：</B>构建DubboServiceInvoker对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 上午11:37:40
+	 * @author edan
+	 * @since 2024年8月19日 上午11:37:40
 	 * @param path
-	 * @param bean
+	 * @param serviceBean
 	 * @param method
 	 * @return DubboServiceInvoker
 	 */

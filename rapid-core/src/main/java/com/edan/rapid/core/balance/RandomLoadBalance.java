@@ -11,8 +11,8 @@ public class RandomLoadBalance extends AbstractLoadBalance {
 	/**
 	 * <B>方法名称：</B>doSelect<BR>
 	 * <B>概要说明：</B>随机负载均衡方法：context instances<BR>
-	 * @author  JiFeng
-	 * @since 2021年12月20日 下午3:18:33
+	 * @author  edan
+	 * @since 2024年8月20日 下午3:18:33
 	 * @see com.edan.rapid.core.balance.AbstractLoadBalance#doSelect(com.edan.rapid.core.context.RapidContext, List)
 	 */
     @Override

@@ -323,23 +323,38 @@ abstract class Striped64 extends Number {
      */
     private static sun.misc.Unsafe getUnsafe() {
         try {
-            return sun.misc.Unsafe.getUnsafe();
+
+            return reflectGetUnsafe();
         } catch (SecurityException se) {
-            try {
-                return java.security.AccessController.doPrivileged
-                    (new java.security
-                     .PrivilegedExceptionAction<sun.misc.Unsafe>() {
-                        public sun.misc.Unsafe run() throws Exception {
-                            java.lang.reflect.Field f = sun.misc
-                                .Unsafe.class.getDeclaredField("theUnsafe");
-                            f.setAccessible(true);
-                            return (sun.misc.Unsafe) f.get(null);
-                        }});
-            } catch (java.security.PrivilegedActionException e) {
-                throw new RuntimeException("Could not initialize intrinsics",
-                                           e.getCause());
-            }
+            return null;
+//            try {
+//                return java.security.AccessController.doPrivileged
+//                    (new java.security
+//                     .PrivilegedExceptionAction<sun.misc.Unsafe>() {
+//                        public sun.misc.Unsafe run() throws Exception {
+//                            java.lang.reflect.Field f = sun.misc
+//                                .Unsafe.class.getDeclaredField("theUnsafe");
+//                            f.setAccessible(true);
+//                            return (sun.misc.Unsafe) f.get(null);
+//                        }});
+//            } catch (java.security.PrivilegedActionException e) {
+//                throw new RuntimeException("Could not initialize intrinsics",
+//                                           e.getCause());
+//            }
         }
     }
+    private static sun.misc.Unsafe reflectGetUnsafe() {
+        try {
+            Class<?> name = Class.forName("sun.misc.Unsafe");
+            java.lang.reflect.Field field = name.getDeclaredField("theUnsafe");
+            field.setAccessible(true);
+            return (sun.misc.Unsafe) field.get(null);
+        } catch (Exception e) {
+            // log.error(e.getMessage(), e);
+            return null;
+        }
+    }
+
+
 
 }

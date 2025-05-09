@@ -19,6 +19,7 @@ import io.netty.handler.codec.http.HttpServerExpectContinueHandler;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.util.concurrent.DefaultThreadFactory;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.InetSocketAddress;
@@ -38,6 +39,14 @@ public class NettyHttpServer implements LifeCycle {
 
     private EventLoopGroup eventLoopGroupBoss;
 
+    /**
+     * -- GETTER --
+     *  <B>方法名称：</B>getEventLoopGroupWork<BR>
+     *  <B>概要说明：</B>获取NettyHttpServer的EventLoopGroupWork<BR>
+     *
+     * @return EventLoopGroup
+     */
+    @Getter
     private EventLoopGroup eventLoopGroupWork;
 
     private NettyProcessor nettyProcessor;
@@ -56,7 +65,7 @@ public class NettyHttpServer implements LifeCycle {
      * <B>方法名称：</B>init<BR>
      * <B>概要说明：</B>初始化方法<BR>
      * @author  edan
-     * @since 2021年12月5日 下午6:42:55
+     * @since 2024年8月5日 下午6:42:55
      * @see com.edan.rapid.core.LifeCycle#init()
      */
     @Override
@@ -79,7 +88,7 @@ public class NettyHttpServer implements LifeCycle {
      * <B>方法名称：</B>useEPoll<BR>
      * <B>概要说明：</B>判断是否支持EPoll<BR>
      * @author edan
-     * @since 2021年12月5日 下午6:46:01
+     * @since 2024年8月5日 下午6:46:01
      * @return
      */
     public boolean useEPoll() {
@@ -90,7 +99,7 @@ public class NettyHttpServer implements LifeCycle {
      * <B>方法名称：</B>start<BR>
      * <B>概要说明：</B>服务器启动方法<BR>
      * @author  edan
-     * @since 2021年12月5日 下午6:50:42
+     * @since 2024年8月5日 下午6:50:42
      * @see com.edan.rapid.core.LifeCycle#start()
      */
     @Override
@@ -135,7 +144,7 @@ public class NettyHttpServer implements LifeCycle {
      * <B>方法名称：</B>shutdown<BR>
      * <B>概要说明：</B>关闭<BR>
      * @author  edan
-     * @since 2021年12月5日 下午7:26:43
+     * @since 2024年8月5日 下午7:26:43
      * @see com.edan.rapid.core.LifeCycle#shutdown()
      */
     @Override
@@ -148,23 +157,12 @@ public class NettyHttpServer implements LifeCycle {
         }
     }
 
-    /**
-     * <B>方法名称：</B>getEventLoopGroupWork<BR>
-     * <B>概要说明：</B>获取NettyHttpServer的EventLoopGroupWork<BR>
-     * @author edan
-     * @since 2021年12月5日 下午10:47:42
-     * @return EventLoopGroup
-     */
-    public EventLoopGroup getEventLoopGroupWork() {
-        return eventLoopGroupWork;
-    }
-
 
     /**
      * <B>主类名称：</B>NettyServerConnectManagerHandler<BR>
      * <B>概要说明：</B>连接管理器<BR>
      * @author edan
-     * @since 2021年12月5日 下午7:10:04
+     * @since 2024年8月5日 下午7:10:04
      */
     static class NettyServerConnectManagerHandler extends ChannelDuplexHandler {
 

@@ -4,7 +4,7 @@ package com.edan.rapid.common.concurrent.queue.mpmc;
  * <B>主类名称：</B>MpmcConcurrentQueue<BR>
  * <B>概要说明：</B>multi producer multi consumer Concurrent Queue<BR>
  * @author edan
- * @since 2021年12月7日 上午11:26:31
+ * @since 2024年8月7日 上午11:26:31
  */
 public class MpmcConcurrentQueue<E> implements ConcurrentQueue<E> {
 
@@ -47,7 +47,7 @@ public class MpmcConcurrentQueue<E> implements ConcurrentQueue<E> {
      * <B>方法名称：</B>offer<BR>
      * <B>概要说明：</B>并发offer, 加入其尾部<BR>
      * @author  edan
-     * @since 2021年12月7日 上午11:27:27
+     * @since 2024年8月7日 上午11:27:27
      * @see com.edan.rapid.common.concurrent.queue.mpmc.ConcurrentQueue#offer(Object)
      */
     @Override
@@ -86,7 +86,7 @@ public class MpmcConcurrentQueue<E> implements ConcurrentQueue<E> {
      * <B>方法名称：</B>poll<BR>
      * <B>概要说明：</B>并发poll, 从头部获取<BR>
      * @author  edan
-     * @since 2021年12月7日 上午11:27:37
+     * @since 2024年8月7日 上午11:27:37
      * @see com.edan.rapid.common.concurrent.queue.mpmc.ConcurrentQueue#poll()
      */
     @Override
@@ -174,7 +174,7 @@ public class MpmcConcurrentQueue<E> implements ConcurrentQueue<E> {
      * <B>主类名称：</B>Cell<BR>
      * <B>概要说明：</B>消除伪共享对象<BR>
      * @author edan
-     * @since 2021年12月7日 上午11:27:49
+     * @since 2024年8月7日 上午11:27:49
      */
     protected static final class Cell<R> {
     	

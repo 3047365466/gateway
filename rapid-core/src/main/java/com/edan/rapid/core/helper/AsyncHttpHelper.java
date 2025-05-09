@@ -8,7 +8,7 @@ import java.util.concurrent.CompletableFuture;
  * <B>主类名称：</B>AsyncHttpHelper<BR>
  * <B>概要说明：</B>异步的http辅助类：NettyHttpClient<BR>
  * @author edan
- * @since 2021年12月5日 下午10:38:30
+ * @since 2024年8月5日 下午10:38:30
  */
 public class AsyncHttpHelper {
 

@@ -9,8 +9,8 @@ import java.util.ServiceLoader;
 /**
  * <B>主类名称：</B>PluginManager<BR>
  * <B>概要说明：</B>插件管理器<BR>
- * @author JiFeng
- * @since 2021年12月21日 上午1:44:01
+ * @author edan
+ * @since 2024年8月21日 上午1:44:01
  */
 @Slf4j
 public class PluginManager {

@@ -12,8 +12,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * <B>主类名称：</B>MetricKafkaClientPlugin<BR>
  * <B>概要说明：</B>MetricKafkaClientPlugin<BR>
- * @author JiFeng
- * @since 2021年12月21日 上午1:45:26
+ * @author edan
+ * @since 2024年8月21日 上午1:45:26
  */
 @Slf4j
 public final class MetricKafkaClientPlugin implements Plugin {

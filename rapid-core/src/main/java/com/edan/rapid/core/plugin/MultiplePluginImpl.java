@@ -9,8 +9,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * <B>主类名称：</B>MultiplePluginImpl<BR>
  * <B>概要说明：</B>多个插件合并实现，并且安全执行插件逻辑<BR>
- * @author JiFeng
- * @since 2021年12月21日 上午1:43:27
+ * @author edan
+ * @since 2024年8月21日 上午1:43:27
  */
 @Slf4j
 public class MultiplePluginImpl implements Plugin {

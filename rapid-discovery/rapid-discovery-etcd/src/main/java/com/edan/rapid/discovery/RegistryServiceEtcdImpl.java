@@ -22,8 +22,8 @@ import java.util.Map;
 /**
  * <B>主类名称：</B>RegistryServiceEtcdImpl<BR>
  * <B>概要说明：</B>注册中心实现类<BR>
- * @author JiFeng
- * @since 2021年12月19日 下午3:27:07
+ * @author edan
+ * @since 2024年8月19日 下午3:27:07
  */
 @Slf4j
 public class RegistryServiceEtcdImpl implements RegistryService {
@@ -60,8 +60,8 @@ public class RegistryServiceEtcdImpl implements RegistryService {
 	/**
 	 * <B>方法名称：</B>addWatcherListeners<BR>
 	 * <B>概要说明：</B>根据一个路径做多种实现，服务的子节点变更 添加监听<BR>
-	 * @author  JiFeng
-	 * @since 2021年12月19日 下午3:50:23
+	 * @author  edan
+	 * @since 2024年8月19日 下午3:50:23
 	 * @see com.edan.rapid.discovery.api.RegistryService#addWatcherListeners(String, com.edan.rapid.discovery.api.Notify)
 	 */
 	@Override
@@ -159,8 +159,8 @@ public class RegistryServiceEtcdImpl implements RegistryService {
 	/**
 	 * <B>方法名称：</B>close<BR>
 	 * <B>概要说明：</B>close<BR>
-	 * @author  JiFeng
-	 * @since 2021年12月19日 下午3:44:44
+	 * @author  edan
+	 * @since 2024年8月19日 下午3:44:44
 	 * @see com.edan.rapid.discovery.api.Registry#close()
 	 */
 	@Override

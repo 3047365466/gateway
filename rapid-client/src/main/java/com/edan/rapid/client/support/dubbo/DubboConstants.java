@@ -3,8 +3,8 @@ package com.edan.rapid.client.support.dubbo;
 /**
  * <B>主类名称：</B>DubboConstants<BR>
  * <B>概要说明：</B>Dubbo常量类<BR>
- * @author JiFeng
- * @since 2021年12月19日 上午11:20:28
+ * @author edan
+ * @since 2024年8月19日 上午11:20:28
  */
 public interface DubboConstants {
 

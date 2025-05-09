@@ -13,8 +13,8 @@ import com.edan.rapid.core.netty.processor.filter.ProcessorFilterType;
 /**
  * <B>主类名称：</B>DefaultErrorFilter<BR>
  * <B>概要说明：</B>默认异常处理过滤器<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午7:47:25
+ * @author edan
+ * @since 2024年8月20日 下午7:47:25
  */
 @Filter(
 		id = ProcessorFilterConstants.DEFAULT_ERROR_FILTER_ID,
@@ -34,7 +34,7 @@ public class DefaultErrorFilter extends AbstractEntryProcessorFilter<FilterConfi
 			Throwable throwable = ctx.getThrowable();
 			ResponseCode responseCode = ResponseCode.INTERNAL_ERROR;
 			if(throwable instanceof RapidBaseException) {
-				RapidBaseException rapidBaseException = (RapidBaseException)throwable;
+				RapidBaseException rapidBaseException = (RapidBaseException) throwable;
 				responseCode = rapidBaseException.getCode();
 			}
 			RapidResponse rapidResponse = RapidResponse.buildRapidResponse(responseCode);

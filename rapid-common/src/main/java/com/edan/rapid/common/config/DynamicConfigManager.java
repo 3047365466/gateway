@@ -8,8 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * <B>主类名称：</B>DynamicConfigManager<BR>
  * <B>概要说明：</B>动态服务缓存配置管理类<BR>
- * @author JiFeng
- * @since 2021年12月11日 上午1:00:56
+ * @author edan
+ * @since 2024年8月11日 上午1:00:56
  */
 public class DynamicConfigManager {
 	

@@ -25,8 +25,8 @@ import java.util.Set;
 /**
  * <B>主类名称：</B>LoadBalancePreFilter<BR>
  * <B>概要说明：</B>负载均衡前置过滤器<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午4:18:17
+ * @author edan
+ * @since 2024年8月20日 下午4:18:17
  */
 @Filter(
 		id = ProcessorFilterConstants.LOADBALANCE_PRE_FILTER_ID,
@@ -44,7 +44,7 @@ public class LoadBalancePreFilter extends AbstractEntryProcessorFilter<LoadBalan
 	public void entry(Context ctx, Object... args) throws Throwable {
 		try {
 			RapidContext rapidContext = (RapidContext)ctx;
-			Config config = (Config)args[0];
+			Config config = (Config) args[0];
 			LoadBalanceStrategy loadBalanceStrategy = config.getBalanceStrategy();
 			String protocol = rapidContext.getProtocol();
 			switch (protocol) {
@@ -88,8 +88,8 @@ public class LoadBalancePreFilter extends AbstractEntryProcessorFilter<LoadBalan
 	/**
 	 * <B>方法名称：</B>doDubboLoadBalance<BR>
 	 * <B>概要说明：</B><BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 下午4:44:45
+	 * @author edan
+	 * @since 2024年8月20日 下午4:44:45
 	 * @param rapidContext
 	 * @param loadBalanceStrategy
 	 */
@@ -101,8 +101,8 @@ public class LoadBalancePreFilter extends AbstractEntryProcessorFilter<LoadBalan
 	/**
 	 * <B>主类名称：</B>Config<BR>
 	 * <B>概要说明：</B>负载均衡前置过滤器配置<BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 下午4:21:54
+	 * @author edan
+	 * @since 2024年8月20日 下午4:21:54
 	 */
 	@Getter
 	@Setter

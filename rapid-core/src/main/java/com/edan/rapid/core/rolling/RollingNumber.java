@@ -18,8 +18,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * <B>主类名称：</B>RollingNumber<BR>
  * <B>概要说明：</B>RollingNumber<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午10:44:25
+ * @author edan
+ * @since 2024年8月20日 下午10:44:25
  */
 public class RollingNumber {
 
@@ -67,8 +67,8 @@ public class RollingNumber {
     /**
      * <B>方法名称：</B>increment<BR>
      * <B>概要说明：</B>就是通过事件：获取当前窗口，Bucket -> adderForCounterType[ordinal()]<BR>
-     * @author JiFeng
-     * @since 2021年12月21日 上午1:09:13
+     * @author edan
+     * @since 2024年8月21日 上午1:09:13
      * @param type
      */
     public void increment(RollingNumberEvent type) {

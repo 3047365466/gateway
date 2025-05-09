@@ -9,7 +9,7 @@ import com.lmax.disruptor.dsl.ProducerType;
  * <B>主类名称：</B>NettyBatchEventProcessor<BR>
  * <B>概要说明：</B>flusher缓冲队列的核心实现, 最终调用的方法还是要回归到NettyCoreProcessor<BR>
  * @author edan
- * @since 2021年12月5日 下午10:11:16
+ * @since 2024年8月5日 下午10:11:16
  */
 public class NettyBatchEventProcessor implements NettyProcessor {
 

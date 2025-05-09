@@ -1,5 +1,8 @@
-## pre 
+##global
+com.edan.rapid.core.netty.processor.filter.global.GlobalRateLimitFilter
+## pre
 com.edan.rapid.core.netty.processor.filter.pre.LoadBalancePreFilter
+com.edan.rapid.core.netty.processor.filter.pre.RateLimitPreFilter
 com.edan.rapid.core.netty.processor.filter.pre.TimeoutPreFilter
 
 

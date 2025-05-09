@@ -7,8 +7,8 @@ import lombok.Data;
 /**
  * <B>主类名称：</B>RapidProperties<BR>
  * <B>概要说明：</B>配置类<BR>
- * @author JiFeng
- * @since 2021年12月18日 上午1:38:51
+ * @author edan
+ * @since 2024年8月18日 上午1:38:51
  */
 @Data
 @ConfigurationProperties(prefix = RapidProperties.RAPID_PREFIX)

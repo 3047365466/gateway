@@ -12,8 +12,8 @@ import java.util.Set;
 /**
  * <B>主类名称：</B>AbstractLoadBalance<BR>
  * <B>概要说明：</B>抽象负载均衡类：主要实现预热的功能<BR>
- * @author JiFeng
- * @since 2021年12月20日 上午12:01:21
+ * @author edan
+ * @since 2024年8月20日 上午12:01:21
  */
 public abstract class AbstractLoadBalance implements LoadBalance {
 
@@ -39,8 +39,8 @@ public abstract class AbstractLoadBalance implements LoadBalance {
 	/**
 	 * <B>方法名称：</B>doSelect<BR>
 	 * <B>概要说明：</B>子类实现指定的负载均衡策略选择一个服务<BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 上午12:10:45
+	 * @author edan
+	 * @since 2024年8月20日 上午12:10:45
 	 * @param context
 	 * @param instances
 	 * @return
@@ -69,8 +69,8 @@ public abstract class AbstractLoadBalance implements LoadBalance {
 	/**
 	 * <B>方法名称：</B>calculateWramUpWeight<BR>
 	 * <B>概要说明：</B>计算服务在预热时间内的新权重<BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 上午12:16:18
+	 * @author edan
+	 * @since 2024年8月20日 上午12:16:18
 	 * @param upTime
 	 * @param warmup
 	 * @param weight

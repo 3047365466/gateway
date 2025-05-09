@@ -6,8 +6,8 @@ import lombok.Getter;
 /**
  * <B>主类名称：</B>RollingNumberEvent<BR>
  * <B>概要说明：</B>环形数组事件类型类<BR>
- * @author JiFeng
- * @since 2021年12月21日 上午12:53:42
+ * @author edan
+ * @since 2024年8月21日 上午12:53:42
  */
 public enum RollingNumberEvent {
 

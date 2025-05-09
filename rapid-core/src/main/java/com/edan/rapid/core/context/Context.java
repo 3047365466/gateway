@@ -8,8 +8,8 @@ import java.util.function.Consumer;
 /**
  * <B>主类名称：</B>Context<BR>
  * <B>概要说明：</B>网关上下文接口定义<BR>
- * @author JiFeng
- * @since 2021年12月9日 上午2:01:24
+ * @author edan
+ * @since 2024年8月9日 上午2:01:24
  */
 public interface Context {
 
@@ -30,32 +30,32 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>runned<BR>
 	 * <B>概要说明：</B>设置上下文状态为正常运行状态<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:11:34
+	 * @author edan
+	 * @since 2024年8月9日 上午2:11:34
 	 */
 	void runned();
 	
 	/**
 	 * <B>方法名称：</B>writtened<BR>
 	 * <B>概要说明：</B>设置上下文状态为标记写回<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:12:07
+	 * @author edan
+	 * @since 2024年8月9日 上午2:12:07
 	 */
 	void writtened();
 	
 	/**
 	 * <B>方法名称：</B>completed<BR>
 	 * <B>概要说明：</B>设置上下文状态为写回结束<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:12:37
+	 * @author edan
+	 * @since 2024年8月9日 上午2:12:37
 	 */
 	void completed();
 	
 	/**
 	 * <B>方法名称：</B>terminated<BR>
 	 * <B>概要说明：</B>设置上下文状态为最终结束<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:13:09
+	 * @author edan
+	 * @since 2024年8月9日 上午2:13:09
 	 */
 	void terminated();
 	
@@ -72,8 +72,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>getProtocol<BR>
 	 * <B>概要说明：</B>获取请求转换协议<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:16:07
+	 * @author edan
+	 * @since 2024年8月9日 上午2:16:07
 	 * @return
 	 */
 	String getProtocol();
@@ -81,8 +81,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>getRule<BR>
 	 * <B>概要说明：</B>获取规则<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:17:07
+	 * @author edan
+	 * @since 2024年8月9日 上午2:17:07
 	 * @return Rule
 	 */
 	Rule getRule();
@@ -90,8 +90,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>getRequest<BR>
 	 * <B>概要说明：</B>获取请求对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:17:50
+	 * @author edan
+	 * @since 2024年8月9日 上午2:17:50
 	 * @return
 	 */
 	Object getRequest();
@@ -99,8 +99,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>getResponse<BR>
 	 * <B>概要说明：</B>获取响应对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:18:13
+	 * @author edan
+	 * @since 2024年8月9日 上午2:18:13
 	 * @return
 	 */
 	Object getResponse();
@@ -108,8 +108,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>setResponse<BR>
 	 * <B>概要说明：</B>设置响应对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:19:31
+	 * @author edan
+	 * @since 2024年8月9日 上午2:19:31
 	 * @param response
 	 */
 	void setResponse(Object response);
@@ -117,8 +117,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>setThrowable<BR>
 	 * <B>概要说明：</B>设置异常信息<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:20:58
+	 * @author edan
+	 * @since 2024年8月9日 上午2:20:58
 	 * @param throwable
 	 */
 	void setThrowable(Throwable throwable);
@@ -126,8 +126,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>getThrowable<BR>
 	 * <B>概要说明：</B>获取异常<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:21:20
+	 * @author edan
+	 * @since 2024年8月9日 上午2:21:20
 	 * @return Throwable
 	 */
 	Throwable getThrowable();
@@ -135,8 +135,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>getAttribute<BR>
 	 * <B>概要说明：</B>获取上下文参数<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:22:45
+	 * @author edan
+	 * @since 2024年8月9日 上午2:22:45
 	 * @param <T>
 	 * @param key 对应的key
 	 * @return T
@@ -146,8 +146,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>putAttribute<BR>
 	 * <B>概要说明：</B>保存上下文属性信息<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:24:26
+	 * @author edan
+	 * @since 2024年8月9日 上午2:24:26
 	 * @param <T>
 	 * @param key   关键key
 	 * @param value 上下文参数值
@@ -158,8 +158,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>getNettyCtx<BR>
 	 * <B>概要说明：</B>获取Netty的上下文对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:25:37
+	 * @author edan
+	 * @since 2024年8月9日 上午2:25:37
 	 * @return ChannelHandlerContext
 	 */
 	ChannelHandlerContext getNettyCtx();
@@ -167,8 +167,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>isKeepAlive<BR>
 	 * <B>概要说明：</B>是否保持连接<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:26:09
+	 * @author edan
+	 * @since 2024年8月9日 上午2:26:09
 	 * @return
 	 */
 	boolean isKeepAlive();
@@ -176,16 +176,16 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>releaseRequest<BR>
 	 * <B>概要说明：</B>释放请求资源的方法<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:27:43
+	 * @author edan
+	 * @since 2024年8月9日 上午2:27:43
 	 */
 	void releaseRequest();
 	
 	/**
 	 * <B>方法名称：</B>completedCallback<BR>
 	 * <B>概要说明：</B>写回接收回调函数设置<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:30:02
+	 * @author edan
+	 * @since 2024年8月9日 上午2:30:02
 	 * @param consumer
 	 */
 	void completedCallback(Consumer<Context> consumer);
@@ -193,8 +193,8 @@ public interface Context {
 	/**
 	 * <B>方法名称：</B>invokeCompletedCallback<BR>
 	 * <B>概要说明：</B>回调函数执行<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午2:30:41
+	 * @author edan
+	 * @since 2024年8月9日 上午2:30:41
 	 */
 	void invokeCompletedCallback();
 

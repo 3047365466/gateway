@@ -9,8 +9,8 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * <B>主类名称：</B>DefaultCacheManager<BR>
  * <B>概要说明：</B>DefaultCacheManager<BR>
- * @author JiFeng
- * @since 2021年12月17日 上午12:02:47
+ * @author edan
+ * @since 2024年8月17日 上午12:02:47
  */
 public class DefaultCacheManager {
 
@@ -33,8 +33,8 @@ public class DefaultCacheManager {
 	/**
 	 * <B>方法名称：</B>create<BR>
 	 * <B>概要说明：</B>根据一个全局的缓存ID 创建一个Caffeine缓存对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月17日 上午12:09:29
+	 * @author edan
+	 * @since 2024年8月17日 上午12:09:29
 	 * @param <V>
 	 * @param cacheId
 	 * @return
@@ -49,8 +49,8 @@ public class DefaultCacheManager {
 	/**
 	 * <B>方法名称：</B>remove<BR>
 	 * <B>概要说明：</B>根据cacheId 和对应的真正Caffeine缓存key 删除一个Caffeine缓存对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月17日 上午12:11:17
+	 * @author edan
+	 * @since 2024年8月17日 上午12:11:17
 	 * @param <V>
 	 * @param cacheId
 	 * @param key
@@ -66,8 +66,8 @@ public class DefaultCacheManager {
 	/**
 	 * <B>方法名称：</B>remove<BR>
 	 * <B>概要说明：</B>根据全局的缓存id 删除这个Caffeine缓存对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月17日 上午12:12:08
+	 * @author edan
+	 * @since 2024年8月17日 上午12:12:08
 	 * @param <V>
 	 * @param cacheId
 	 */
@@ -81,8 +81,8 @@ public class DefaultCacheManager {
 	/**
 	 * <B>方法名称：</B>cleanAll<BR>
 	 * <B>概要说明：</B>清空所有的缓存<BR>
-	 * @author JiFeng
-	 * @since 2021年12月17日 上午12:13:13
+	 * @author edan
+	 * @since 2024年8月17日 上午12:13:13
 	 */
 	public void cleanAll() {
 		cacheMap.values().forEach(cache -> cache.invalidateAll());
@@ -91,8 +91,8 @@ public class DefaultCacheManager {
 	/**
 	 * <B>方法名称：</B>createForDubboGenericService<BR>
 	 * <B>概要说明：</B>createForDubboGenericService<BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 下午8:21:56
+	 * @author edan
+	 * @since 2024年8月20日 下午8:21:56
 	 * @return
 	 */
 	public static Cache<String, GenericService> createForDubboGenericService() {

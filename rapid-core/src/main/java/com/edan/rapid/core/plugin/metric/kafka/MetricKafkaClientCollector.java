@@ -14,8 +14,8 @@ import java.util.concurrent.Future;
 /**
  * <B>主类名称：</B>MetricKafkaClientCollector<BR>
  * <B>概要说明：</B>kafka指标收集<BR>
- * @author JiFeng
- * @since 2021年12月21日 上午1:45:17
+ * @author edan
+ * @since 2024年8月21日 上午1:45:17
  */
 public final class MetricKafkaClientCollector implements MetricClientCollector {
 
@@ -97,8 +97,8 @@ public final class MetricKafkaClientCollector implements MetricClientCollector {
     /**
      * <B>方法名称：</B>sendAsync<BR>
      * <B>概要说明：</B>异步发送<BR>
-     * @author hezhuo.Bai-JiFeng
-     * @since 2021年12月1日 下午4:03:28
+     * @author hezhuo.Bai-edan
+     * @since 2024年8月1日 下午4:03:28
      * @param <T>
      * @param topic
      * @param message

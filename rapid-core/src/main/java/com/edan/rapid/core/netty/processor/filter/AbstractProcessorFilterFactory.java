@@ -10,8 +10,8 @@ import java.util.Map;
 /**
  * <B>主类名称：</B>AbstractProcessorFilterFactory<BR>
  * <B>概要说明：</B>抽象的过滤器工厂<BR>
- * @author JiFeng
- * @since 2021年12月16日 上午12:20:53
+ * @author edan
+ * @since 2024年8月16日 上午12:20:53
  */
 @Slf4j
 public abstract class AbstractProcessorFilterFactory implements ProcessorFilterFactory {
@@ -39,23 +39,25 @@ public abstract class AbstractProcessorFilterFactory implements ProcessorFilterF
 	/**
 	 * <B>方法名称：</B>buildFilterChain<BR>
 	 * <B>概要说明：</B>构建过滤器链条<BR>
-	 * @author  JiFeng
-	 * @since 2021年12月16日 上午12:44:00
-	 * @see com.edan.edan.core.netty.processor.filter.ProcessorFilterFactory#buildFilterChain(com.edan.rapid.core.netty.processor.filter.ProcessorFilterType, List)
+	 * @author  edan
+	 * @since 2024年8月16日 上午12:44:00
+	 * @see com.edan.rapid.core.netty.processor.filter.ProcessorFilterFactory#buildFilterChain(com.edan.rapid.core.netty.processor.filter.ProcessorFilterType, List)
 	 */
 	@Override
 	public void buildFilterChain(ProcessorFilterType filterType, List<ProcessorFilter<Context>> filters) throws Exception {
 		switch (filterType) {
-			case PRE:
-			case ROUTE:
-				addFilterForChain(defaultProcessorFilterChain, filters);
+			case GLOBAL:
+            case PRE:
+            case ROUTE:
+                addFilterForChain(defaultProcessorFilterChain, filters);
 				break;
-			case ERROR:
+            case ERROR:
 				addFilterForChain(errorProcessorFilterChain, filters);
 				break;
 			case POST:	
 				addFilterForChain(defaultProcessorFilterChain, filters);
 				addFilterForChain(errorProcessorFilterChain, filters);
+				break;
 			default:
 				throw new RuntimeException("ProcessorFilterType is not supported !");
 			}
@@ -73,11 +75,9 @@ public abstract class AbstractProcessorFilterFactory implements ProcessorFilterF
 	/**
 	 * <B>方法名称：</B>doBuilder<BR>
 	 * <B>概要说明：</B>添加过滤器到指定的filterChain<BR>
-	 * @author JiFeng
-	 * @since 2021年12月16日 上午12:46:15
-	 * @param defaultProcessorFilterChain
-	 * @param processorFilter
-	 */
+	 * @author edan
+	 * @since 2024年8月16日 上午12:46:15
+     */
 	private void doBuilder(DefaultProcessorFilterChain processorFilterChain,
 			ProcessorFilter<Context> processorFilter) {
 		

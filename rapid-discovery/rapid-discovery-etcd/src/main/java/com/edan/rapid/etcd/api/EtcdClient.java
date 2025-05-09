@@ -18,8 +18,8 @@ import java.util.concurrent.TimeoutException;
 /**
  * <B>主类名称：</B>EtcdClient<BR>
  * <B>概要说明：</B>EtcdClient<BR>
- * @author JiFeng
- * @since 2021年12月19日 上午11:55:36
+ * @author edan
+ * @since 2024年8月19日 上午11:55:36
  */
 public interface EtcdClient {
 	

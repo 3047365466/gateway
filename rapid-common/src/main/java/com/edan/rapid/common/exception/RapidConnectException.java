@@ -6,8 +6,8 @@ import lombok.Getter;
 /**
  * <B>主类名称：</B>RapidConnectException<BR>
  * <B>概要说明：</B>连接异常定义类<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午5:17:05
+ * @author edan
+ * @since 2024年8月20日 下午5:17:05
  */
 public class RapidConnectException extends RapidBaseException {
 

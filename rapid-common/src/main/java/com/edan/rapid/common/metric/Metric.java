@@ -11,8 +11,8 @@ import java.util.Map;
 /**
  * <B>主类名称：</B>Metric<BR>
  * <B>概要说明：</B>Unary Metric Struct：一元数据指标结构<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午10:58:49
+ * @author edan
+ * @since 2024年8月20日 下午10:58:49
  */
 @Data
 @EqualsAndHashCode(callSuper=true)
@@ -54,8 +54,8 @@ public class Metric extends TimeSeries implements Serializable {
     /**
      * <B>方法名称：</B><BR>
      * <B>概要说明：</B><BR>
-     * @author JiFeng
-     * @since 2021年3月13日 下午1:03:31
+     * @author edan
+     * @since 2023年3月13日 下午1:03:31
      * @param name      指标名称
      * @param value     指标取值
      * @param timestamp 时间戳

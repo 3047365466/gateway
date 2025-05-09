@@ -31,8 +31,8 @@ import static org.apache.dubbo.rpc.protocol.dubbo.Constants.SHARE_CONNECTIONS_KE
 /**
  * <B>主类名称：</B>DubboReferenceHelper<BR>
  * <B>概要说明：</B>泛化调用的辅助类<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午8:21:08
+ * @author edan
+ * @since 2024年8月20日 下午8:21:08
  */
 @SuppressWarnings("all")
 public class DubboReferenceHelper {

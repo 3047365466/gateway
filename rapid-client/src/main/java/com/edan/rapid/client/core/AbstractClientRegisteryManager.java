@@ -1,11 +1,5 @@
 package com.edan.rapid.client.core;
 
-import java.io.InputStream;
-import java.util.Properties;
-
-import lombok.Getter;
-import org.apache.commons.lang3.StringUtils;
-
 import com.edan.rapid.client.core.autoconfigure.RapidProperties;
 import com.edan.rapid.common.config.ServiceDefinition;
 import com.edan.rapid.common.config.ServiceInstance;
@@ -14,16 +8,19 @@ import com.edan.rapid.common.util.FastJsonConvertUtil;
 import com.edan.rapid.common.util.ServiceLoader;
 import com.edan.rapid.discovery.api.Registry;
 import com.edan.rapid.discovery.api.RegistryService;
+import lombok.Getter;
+import org.apache.commons.lang3.StringUtils;
 
-import lombok.extern.slf4j.Slf4j;
+import java.io.InputStream;
+import java.util.Properties;
 
 /**
  * <B>主类名称：</B>AbstractClientRegisteryManager<BR>
  * <B>概要说明：</B>抽象注册管理器<BR>
- * @author JiFeng
- * @since 2021年12月19日 上午9:40:23
+ * @author edan
+ * @since 2024年8月19日 上午9:40:23
  */
-@Slf4j
+// @Slf4j
 public abstract class AbstractClientRegisteryManager {
 
 	public static final String PROPERTIES_PATH = "rapid.properties";
@@ -44,9 +41,12 @@ public abstract class AbstractClientRegisteryManager {
 	@Getter
 	protected static String namespace ;
 	
-	@Getter
 	protected static String env ;
-	
+
+	public static String getEnv() {
+		return env;
+	}
+
 	@Getter
 	protected static String superPath;
 	
@@ -74,7 +74,7 @@ public abstract class AbstractClientRegisteryManager {
 				env = properties.getProperty(ENV_KEY);
 				if(StringUtils.isBlank(registryAddress)) {
 					String errorMessage = "Rapid网关注册配置地址不能为空";
-					log.error(errorMessage);
+					// log.error(errorMessage);
 					throw new RuntimeException(errorMessage);
 				}
 				if(StringUtils.isBlank(namespace)) {
@@ -82,7 +82,7 @@ public abstract class AbstractClientRegisteryManager {
 				}
 			}
 		} catch (Exception e) {
-			log.error("#AbstractClientRegisteryManager# InputStream load is error", e);
+			// log.error("#AbstractClientRegisteryManager# InputStream load is error", e);
 		}
 	}
 	
@@ -117,8 +117,8 @@ public abstract class AbstractClientRegisteryManager {
 	/**
 	 * <B>方法名称：</B>generatorStructPath<BR>
 	 * <B>概要说明：</B>注册顶级结构目录路径，只需要构建一次即可<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 上午10:04:32
+	 * @author edan
+	 * @since 2024年8月19日 上午10:04:32
 	 * @param path
 	 * @throws Exception
 	 */
@@ -133,8 +133,8 @@ public abstract class AbstractClientRegisteryManager {
 	/**
 	 * <B>方法名称：</B>registerServiceDefinition<BR>
 	 * <B>概要说明：</B>注册服务定义 对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 上午10:08:22
+	 * @author edan
+	 * @since 2024年8月19日 上午10:08:22
 	 * @param serviceDefinition ServiceDefinition
 	 * @throws Exception
 	 */
@@ -168,8 +168,8 @@ public abstract class AbstractClientRegisteryManager {
 	/**
 	 * <B>方法名称：</B>registerServiceInstance<BR>
 	 * <B>概要说明：</B>注册服务实例方法<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 上午10:10:15
+	 * @author edan
+	 * @since 2024年8月19日 上午10:10:15
 	 * @param serviceInstance ServiceInstance
 	 * @throws Exception
 	 */

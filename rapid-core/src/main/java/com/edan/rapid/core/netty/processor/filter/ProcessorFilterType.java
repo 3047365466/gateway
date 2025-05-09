@@ -3,18 +3,19 @@ package com.edan.rapid.core.netty.processor.filter;
 /**
  * <B>主类名称：</B>ProcessorFilterType<BR>
  * <B>概要说明：</B>过滤器的类型定义<BR>
- * @author JiFeng
- * @since 2021年12月14日 上午12:50:11
+ * @author edan
+ * @since 2024年8月14日 上午12:50:11
  */
 public enum ProcessorFilterType {
 
+	GLOBAL("GLOBAL", "全局过滤器"),
 	PRE("PRE", "前置过滤器"),
 	
 	ROUTE("ROUTE", "中置过滤器"),
 	
 	ERROR("ERROR", "前置过滤器"),
 	
-	POST("POST", "前置过滤器");
+	POST("POST", "后置过滤器");
 	
 	private final String code ;
 	

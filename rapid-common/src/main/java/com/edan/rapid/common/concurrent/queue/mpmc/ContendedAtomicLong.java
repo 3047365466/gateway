@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicLongArray;
  * <B>主类名称：</B>ContendedAtomicLong<BR>
  * <B>概要说明：</B>Avoid false cache line sharing<BR>
  * @author edan
- * @since 2021年12月7日 上午11:25:13
+ * @since 2024年8月7日 上午11:25:13
  */
 public class ContendedAtomicLong extends Contended {
 

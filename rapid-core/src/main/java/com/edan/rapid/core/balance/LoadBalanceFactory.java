@@ -9,8 +9,8 @@ import java.util.Map;
 /**
  * <B>主类名称：</B>LoadBalanceFactory<BR>
  * <B>概要说明：</B>LoadBalanceFactory<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午2:59:03
+ * @author edan
+ * @since 2024年8月20日 下午2:59:03
  */
 public class LoadBalanceFactory {
 

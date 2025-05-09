@@ -27,8 +27,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * <B>主类名称：</B>EtcdClientImpl<BR>
  * <B>概要说明：</B>EtcdClientImpl<BR>
- * @author JiFeng
- * @since 2021年12月19日 下午3:06:13
+ * @author edan
+ * @since 2024年8月19日 下午3:06:13
  */
 @Slf4j
 public class EtcdClientImpl implements EtcdClient {
@@ -316,8 +316,8 @@ public class EtcdClientImpl implements EtcdClient {
     /**
      * <B>方法名称：</B>addWatcherListener<BR>
      * <B>概要说明：</B>添加一个监听操作<BR>
-     * @author  JiFeng
-     * @since 2021年12月19日 下午3:02:23
+     * @author  edan
+     * @since 2024年8月19日 下午3:02:23
      * @see EtcdClient#addWatcherListener(String, boolean, WatcherListener)
      */
     public synchronized void addWatcherListener(final String watcherKey, final boolean usePrefix, WatcherListener watcherListener) {
@@ -343,8 +343,8 @@ public class EtcdClientImpl implements EtcdClient {
     /**
      * <B>主类名称：</B>EtcdWatcher<BR>
      * <B>概要说明：</B>监听实现类<BR>
-     * @author JiFeng
-     * @since 2021年12月19日 下午3:03:12
+     * @author edan
+     * @since 2024年8月19日 下午3:03:12
      */
     private class EtcdWatcher {
     	

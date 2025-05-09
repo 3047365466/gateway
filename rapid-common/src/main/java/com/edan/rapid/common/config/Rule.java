@@ -33,8 +33,8 @@ public class Rule implements Comparable<Rule>, Serializable {
     /**
      * <B>方法名称：</B>addFilterConfig<BR>
      * <B>概要说明：</B>向规则里面添加指定的过滤器<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:21:07
+     * @author edan
+     * @since 2024年8月9日 下午2:21:07
      * @param filterConfig
      * @return
      */
@@ -45,8 +45,8 @@ public class Rule implements Comparable<Rule>, Serializable {
     /**
      * <B>方法名称：</B>getFilterConfig<BR>
      * <B>概要说明：</B>通过一个指定的filterId 获取getFilterConfig<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:22:57
+     * @author edan
+     * @since 2024年8月9日 下午2:22:57
      * @param id
      * @return Rule.FilterConfig
      */
@@ -62,8 +62,8 @@ public class Rule implements Comparable<Rule>, Serializable {
     /**
      * <B>方法名称：</B>hashId<BR>
      * <B>概要说明：</B>根据传入的filterId 判断当前Rule中是否存在<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:24:27
+     * @author edan
+     * @since 2024年8月9日 下午2:24:27
      * @param id
      * @return boolean
      */
@@ -97,8 +97,8 @@ public class Rule implements Comparable<Rule>, Serializable {
     /**
      * <B>主类名称：</B>FilterConfig<BR>
      * <B>概要说明：</B>过滤器的配置类<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:10:13
+     * @author edan
+     * @since 2024年8月9日 下午2:10:13
      */
     public static class FilterConfig {
 

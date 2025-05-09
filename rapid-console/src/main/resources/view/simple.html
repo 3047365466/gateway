@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API网关接口详情</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            color: #2b9688;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ebeef5;
+        }
+        th {
+            background-color: #f5f7fa;
+            color: #606266;
+            font-weight: 500;
+        }
+        tr:hover {
+            background-color: #f5f7fa;
+        }
+        .button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #409eff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #337ecc;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 16px;
+            color: #909399;
+        }
+        .error {
+            background-color: #fef0f0;
+            color: #f56c6c;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>API网关 - 接口详情</h1>
+        
+        <button class="button" onclick="window.location.href='index.html'">返回主页</button>
+        
+        <div id="service-info">
+            <h2 id="service-name">加载中...</h2>
+            
+            <div id="loading" class="loading">正在加载数据...</div>
+            <div id="error" class="error" style="display: none;"></div>
+            
+            <table id="interface-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>接口路径</th>
+                        <th>超时时间(ms)</th>
+                        <th>规则ID</th>
+                    </tr>
+                </thead>
+                <tbody id="interface-data">
+                    <!-- 数据将在这里动态加载 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // 页面加载时获取数据
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+        });
+        
+        // 加载数据
+        function loadData() {
+            const tableBody = document.getElementById('interface-data');
+            const tableElement = document.getElementById('interface-table');
+            const loadingElement = document.getElementById('loading');
+            const errorElement = document.getElementById('error');
+            const serviceNameElement = document.getElementById('service-name');
+            
+            // 获取URL参数中的服务ID
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceId = urlParams.get('serviceId') || 'hello:1.0.1';
+            
+            // 更新服务名称
+            serviceNameElement.textContent = `服务: ${serviceId}`;
+            
+            // 使用Axios获取数据
+            axios.get('http://localhost:9005/message/all?prefixPath=edanRapid-dev-dev')
+                .then(response => {
+                    // 隐藏加载提示
+                    loadingElement.style.display = 'none';
+                    
+                    const data = response.data;
+                    
+                    if (data && data.serviceDefinitionList && data.serviceDefinitionList.length > 0) {
+                        // 查找匹配的服务
+                        const service = data.serviceDefinitionList.find(s => s.uniqueId === serviceId) || data.serviceDefinitionList[0];
+                        
+                        // 更新服务名称
+                        serviceNameElement.textContent = `服务: ${service.uniqueId}`;
+                        
+                        const invokerMap = service.invokerMap;
+                        
+                        if (invokerMap && Object.keys(invokerMap).length > 0) {
+                            // 显示接口表格
+                            tableElement.style.display = 'table';
+                            
+                            // 循环创建表格行
+                            Object.entries(invokerMap).forEach(([path, data]) => {
+                                const row = document.createElement('tr');
+                                
+                                // 创建单元格：接口路径
+                                const pathCell = document.createElement('td');
+                                pathCell.textContent = path;
+                                row.appendChild(pathCell);
+                                
+                                // 创建单元格：超时时间
+                                const timeoutCell = document.createElement('td');
+                                timeoutCell.textContent = data.timeout || '-';
+                                row.appendChild(timeoutCell);
+                                
+                                // 创建单元格：规则ID
+                                const ruleIdCell = document.createElement('td');
+                                ruleIdCell.textContent = data.ruleId || '-';
+                                row.appendChild(ruleIdCell);
+                                
+                                // 将行添加到表格
+                                tableBody.appendChild(row);
+                            });
+                        } else {
+                            // 没有接口数据
+                            errorElement.textContent = '该服务没有接口信息';
+                            errorElement.style.display = 'block';
+                        }
+                    } else {
+                        // 没有服务数据
+                        errorElement.textContent = '没有找到服务数据';
+                        errorElement.style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    // 隐藏加载提示
+                    loadingElement.style.display = 'none';
+                    
+                    // 显示错误信息
+                    errorElement.textContent = `获取数据失败: ${error.message}。使用静态数据代替。`;
+                    errorElement.style.display = 'block';
+                    
+                    // 显示静态数据
+                    tableElement.style.display = 'table';
+                    
+                    // 添加静态数据行
+                    const staticData = [
+                        { path: '/hello', timeout: 5000, ruleId: 1 },
+                        { path: '/hello/world', timeout: 3000, ruleId: 2 },
+                        { path: '/api/v1/users', timeout: 8000, ruleId: 3 }
+                    ];
+                    
+                    staticData.forEach(item => {
+                        const row = document.createElement('tr');
+                        
+                        // 创建单元格：接口路径
+                        const pathCell = document.createElement('td');
+                        pathCell.textContent = item.path;
+                        row.appendChild(pathCell);
+                        
+                        // 创建单元格：超时时间
+                        const timeoutCell = document.createElement('td');
+                        timeoutCell.textContent = item.timeout;
+                        row.appendChild(timeoutCell);
+                        
+                        // 创建单元格：规则ID
+                        const ruleIdCell = document.createElement('td');
+                        ruleIdCell.textContent = item.ruleId;
+                        row.appendChild(ruleIdCell);
+                        
+                        // 将行添加到表格
+                        tableBody.appendChild(row);
+                    });
+                });
+        }
+    </script>
+</body>
+</html> 

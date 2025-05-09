@@ -14,8 +14,8 @@ import java.util.function.Consumer;
 /**
  * <B>主类名称：</B>BasicContext<BR>
  * <B>概要说明：</B>基础上下文实现类<BR>
- * @author JiFeng
- * @since 2021年12月9日 上午11:12:49
+ * @author edan
+ * @since 2024年8月9日 上午11:12:49
  */
 @Getter
 @Setter

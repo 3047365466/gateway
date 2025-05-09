@@ -19,8 +19,8 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * <B>主类名称：</B>HashedWheelTimer<BR>
  * <B>概要说明：</B>时间轮<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午11:04:11
+ * @author edan
+ * @since 2024年8月20日 下午11:04:11
  */
 @Slf4j
 public class HashedWheelTimer implements Timer {
@@ -331,8 +331,8 @@ public class HashedWheelTimer implements Timer {
     /**
      * <B>方法名称：</B>newTimeout<BR>
      * <B>概要说明：</B>添加一个延迟任务<BR>
-     * @author  JiFeng
-     * @since 2021年12月20日 下午11:04:27
+     * @author  edan
+     * @since 2024年8月20日 下午11:04:27
      * @see com.edan.rapid.common.hashed.Timer#newTimeout(com.edan.rapid.common.hashed.TimerTask, long, TimeUnit)
      */
     @Override
@@ -415,8 +415,8 @@ public class HashedWheelTimer implements Timer {
      * <B>主类名称：</B>Worker<BR>
      * <B>概要说明：</B>工作任务：单线程用于处理所有的定时任务，它会在每个tick执行一个bucket中所有的定时任务，以及一些其他的操作<BR>
      * <BR>意味着定时任务不能有较大的阻塞和耗时，不然就会影响定时任务执行的准时性和有效性<BR>
-     * @author JiFeng
-     * @since 2021年12月20日 下午11:04:39
+     * @author edan
+     * @since 2024年8月20日 下午11:04:39
      */
     private final class Worker implements Runnable {
     	
@@ -481,8 +481,8 @@ public class HashedWheelTimer implements Timer {
         /**
          * <B>方法名称：</B>transferTimeoutsToBuckets<BR>
          * <B>概要说明：</B>将要处理的任务移动到对应的bucket位置上去<BR>
-         * @author JiFeng
-         * @since 2021年12月20日 下午11:04:54
+         * @author edan
+         * @since 2024年8月20日 下午11:04:54
          */
         private void transferTimeoutsToBuckets() {
         	//	最多一次转移100000个待分发定时任务到它们对应的bucket内，不然如果有一个线程一直添加定时任务就能让工作线程活生生饿死
@@ -580,8 +580,8 @@ public class HashedWheelTimer implements Timer {
      * <B>主类名称：</B>HashedWheelTimeout<BR>
      * <B>概要说明：</B>Hashed时间轮超时类：代表一个定时任务，其中记录了自己的deadline、运行逻辑以及在bucket中需要呆满的圈数；<BR>
      * <BR>比方说是1s和11s两个任务，他们对应的timeout中圈数就应该是0和1。 这样当遍历一个bucket中所有的timeout的时候，只要圈数为0说明就应该被执行，而其他情况就把圈数-1就好<BR>
-     * @author JiFeng
-     * @since 2021年12月20日 下午11:05:09
+     * @author edan
+     * @since 2024年8月20日 下午11:05:09
      */
     private static final class HashedWheelTimeout implements Timeout {
 
@@ -755,8 +755,8 @@ public class HashedWheelTimer implements Timer {
         /**
          * <B>方法名称：</B>expireTimeouts<BR>
          * <B>概要说明：</B>Expire all: 将当前节点的所有过期任务取出并执行<BR>
-         * @author JiFeng
-         * @since 2021年12月20日 下午11:05:29
+         * @author edan
+         * @since 2024年8月20日 下午11:05:29
          * @param deadline
          */
         public void expireTimeouts(long deadline) {

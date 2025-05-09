@@ -5,8 +5,8 @@ import io.etcd.jetcd.KeyValue;
 /**
  * <B>主类名称：</B>EtcdChangedEvent<BR>
  * <B>概要说明：</B>EtcdChangedEvent<BR>
- * @author JiFeng
- * @since 2021年12月19日 上午11:55:24
+ * @author edan
+ * @since 2024年8月19日 上午11:55:24
  */
 public class EtcdChangedEvent {
 

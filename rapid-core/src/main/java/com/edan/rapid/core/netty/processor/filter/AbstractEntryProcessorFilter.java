@@ -14,8 +14,8 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * <B>主类名称：</B>AbstractEntryProcessorFilter<BR>
  * <B>概要说明：</B>抽象的Filter 用于真正的Filter进行继承的<BR>
- * @author JiFeng
- * @since 2021年12月16日 下午11:34:26
+ * @author edan
+ * @since 2024年8月16日 下午11:34:26
  */
 @Slf4j
 public abstract class AbstractEntryProcessorFilter<FilterConfigClass> extends AbstractLinkedProcessorFilter<Context> {
@@ -46,8 +46,8 @@ public abstract class AbstractEntryProcessorFilter<FilterConfigClass> extends Ab
 	/**
 	 * <B>方法名称：</B>dynamicLoadCache<BR>
 	 * <B>概要说明：</B>动态加载缓存：每一个过滤器的具体配置规则<BR>
-	 * @author JiFeng
-	 * @since 2021年12月16日 下午11:40:51
+	 * @author edan
+	 * @since 2024年8月16日 下午11:40:51
 	 * @param ctx
 	 * @param args
 	 */

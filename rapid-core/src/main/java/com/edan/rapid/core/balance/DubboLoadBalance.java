@@ -23,8 +23,8 @@ import java.util.Set;
 /**
  * <B>主类名称：</B>DubboLoadBalance<BR>
  * <B>概要说明：</B>使用dubbo的SPI扩展点实现<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午8:32:37
+ * @author edan
+ * @since 2024年8月20日 下午8:32:37
  */
 public class DubboLoadBalance implements org.apache.dubbo.rpc.cluster.LoadBalance {
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Gateway Backend Connection Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>API Gateway Backend Connection Test</h1>
+    <div id="result">Checking connection...</div>
+
+    <script>
+        // Test the backend connection
+        const testConnection = async () => {
+            const resultElement = document.getElementById('result');
+            
+            try {
+                // Try to get data from the backend
+                const response = await axios.get('http://localhost:9005/message/all?prefixPath=edanRapid-dev-dev', {
+                    timeout: 5000
+                });
+                
+                if (response.status === 200) {
+                    resultElement.innerHTML = `
+                        <div style="color: green; font-weight: bold;">
+                            ✅ Connection successful!<br>
+                            Status: ${response.status}<br>
+                            Data received: ${JSON.stringify(response.data, null, 2)}
+                        </div>
+                    `;
+                } else {
+                    resultElement.innerHTML = `
+                        <div style="color: orange; font-weight: bold;">
+                            ⚠️ Connection made but returned unexpected status:<br>
+                            Status: ${response.status}<br>
+                            Data: ${JSON.stringify(response.data, null, 2)}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultElement.innerHTML = `
+                    <div style="color: red; font-weight: bold;">
+                        ❌ Connection failed:<br>
+                        ${error.message}<br>
+                        ${error.response ? 'Status: ' + error.response.status : ''}
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <p><strong>Common issues:</strong></p>
+                        <ul>
+                            <li>Backend server is not running on port 9005</li>
+                            <li>CORS is not properly configured on the backend</li>
+                            <li>Network connectivity issues</li>
+                            <li>Incorrect API path or parameters</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        };
+
+        // Run the test when the page loads
+        window.onload = testConnection;
+    </script>
+</body>
+</html> 

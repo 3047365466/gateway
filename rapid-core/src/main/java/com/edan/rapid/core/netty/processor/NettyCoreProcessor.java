@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
  * <B>主类名称：</B>NettyCoreProcessor<BR>
  * <B>概要说明：</B>核心流程的主执行逻辑<BR>
  * @author edan
- * @since 2021年12月5日 下午9:51:34
+ * @since 2024年8月5日 下午9:51:34
  */
 @Slf4j
 public class NettyCoreProcessor implements NettyProcessor {
@@ -68,8 +68,8 @@ public class NettyCoreProcessor implements NettyProcessor {
 	/**
 	 * <B>方法名称：</B>doWriteAndRelease<BR>
 	 * <B>概要说明：</B>写回响应信息并释放资源<BR>
-	 * @author JiFeng
-	 * @since 2021年12月20日 下午6:12:10
+	 * @author edan
+	 * @since 2024年8月20日 下午6:12:10
 	 * @param ctx
 	 * @param request
 	 * @param response

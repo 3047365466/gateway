@@ -7,8 +7,8 @@ import java.util.List;
 /**
  * <B>主类名称：</B>Registry<BR>
  * <B>概要说明：</B>注册接口<BR>
- * @author JiFeng
- * @since 2021年12月19日 下午1:06:58
+ * @author edan
+ * @since 2024年8月19日 下午1:06:58
  */
 public interface Registry {
 
@@ -37,8 +37,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>registerPathIfNotExists<BR>
 	 * <B>概要说明：</B>注册一个路径如果不存在<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:22:26
+	 * @author edan
+	 * @since 2024年8月19日 下午1:22:26
 	 * @param path
 	 * @param value
 	 * @param isPersistent
@@ -49,8 +49,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>registerEphemeralNode<BR>
 	 * <B>概要说明：</B>注册一个临时节点<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:23:22
+	 * @author edan
+	 * @since 2024年8月19日 下午1:23:22
 	 * @param key
 	 * @param value
 	 * @return
@@ -61,8 +61,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>registerPersistentNode<BR>
 	 * <B>概要说明：</B>注册一个永久节点<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:23:50
+	 * @author edan
+	 * @since 2024年8月19日 下午1:23:50
 	 * @param key
 	 * @param value
 	 * @throws Exception
@@ -72,8 +72,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>getListByPrefixKey<BR>
 	 * <B>概要说明：</B>通过一个前缀路径，获取一堆对应的数据信息<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:25:14
+	 * @author edan
+	 * @since 2024年8月19日 下午1:25:14
 	 * @param prefix
 	 * @return
 	 */
@@ -82,8 +82,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>getByKey<BR>
 	 * <B>概要说明：</B>通过一个key查询对应键值对对象<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:26:57
+	 * @author edan
+	 * @since 2024年8月19日 下午1:26:57
 	 * @param key
 	 * @return
 	 * @throws Exception
@@ -93,8 +93,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>isExistKey<BR>
 	 * <B>概要说明：</B>根据一个key键，判断是否存在<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:26:12
+	 * @author edan
+	 * @since 2024年8月19日 下午1:26:12
 	 * @param key
 	 * @return
 	 * @throws Exception
@@ -104,8 +104,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>deleteByKey<BR>
 	 * <B>概要说明：</B>根据key删除<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:27:27
+	 * @author edan
+	 * @since 2024年8月19日 下午1:27:27
 	 * @param key
 	 */
 	void deleteByKey(String key);
@@ -113,8 +113,8 @@ public interface Registry {
 	/**
 	 * <B>方法名称：</B>close<BR>
 	 * <B>概要说明：</B>关闭服务<BR>
-	 * @author JiFeng
-	 * @since 2021年12月19日 下午1:27:41
+	 * @author edan
+	 * @since 2024年8月19日 下午1:27:41
 	 */
 	void close();
 	

@@ -6,7 +6,7 @@ import java.util.concurrent.locks.LockSupport;
  * <B>主类名称：</B>Condition<BR>
  * <B>概要说明：</B>Return true once a condition is satisfied<BR>
  * @author edan
- * @since 2021年12月7日 上午11:19:54
+ * @since 2024年8月7日 上午11:19:54
  */
 interface Condition {
 
@@ -18,7 +18,7 @@ interface Condition {
      * <B>方法名称：</B>test<BR>
      * <B>概要说明：</B>return true if the queue condition is satisfied<BR>
      * @author edan
-     * @since 2021年12月7日 上午11:20:07
+     * @since 2024年8月7日 上午11:20:07
      * @return
      */
     boolean test();
@@ -27,7 +27,7 @@ interface Condition {
      * <B>方法名称：</B>awaitNanos<BR>
      * <B>概要说明：</B>wake me when the condition is satisfied, or timeout<BR>
      * @author edan
-     * @since 2021年12月7日 上午11:20:18
+     * @since 2024年8月7日 上午11:20:18
      * @param timeout 超时时间
      * @throws InterruptedException
      */
@@ -37,7 +37,7 @@ interface Condition {
      * <B>方法名称：</B>await<BR>
      * <B>概要说明：</B>wake if signal is called, or wait indefinitely<BR>
      * @author edan
-     * @since 2021年12月7日 上午11:20:32
+     * @since 2024年8月7日 上午11:20:32
      * @throws InterruptedException
      */
     void await() throws InterruptedException;
@@ -46,7 +46,7 @@ interface Condition {
      * <B>方法名称：</B>signal<BR>
      * <B>概要说明：</B>tell threads waiting on condition to wake up<BR>
      * @author edan
-     * @since 2021年12月7日 上午11:20:42
+     * @since 2024年8月7日 上午11:20:42
      */
     void signal();
 
@@ -54,7 +54,7 @@ interface Condition {
      * <B>方法名称：</B>progressiveYield<BR>
      * <B>概要说明：</B>progressively transition from spin to yield over time<BR>
      * @author edan
-     * @since 2021年12月7日 上午11:20:52
+     * @since 2024年8月7日 上午11:20:52
      * @param n
      * @return
      */
@@ -94,7 +94,7 @@ interface Condition {
      * <B>方法名称：</B>waitStatus<BR>
      * <B>概要说明：</B>Wait for timeout on condition<BR>
      * @author edan
-     * @since 2021年12月7日 上午11:21:23
+     * @since 2024年8月7日 上午11:21:23
      * @param timeout
      * @param unit
      * @param condition

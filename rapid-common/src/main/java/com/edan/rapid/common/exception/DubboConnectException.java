@@ -6,8 +6,8 @@ import lombok.Getter;
 /**
  * <B>主类名称：</B>DubboConnectException<BR>
  * <B>概要说明：</B>DubboConnectException<BR>
- * @author JiFeng
- * @since 2021年12月20日 下午8:23:21
+ * @author edan
+ * @since 2024年8月20日 下午8:23:21
  */
 public class DubboConnectException extends RapidConnectException {
 	

@@ -11,8 +11,8 @@ import java.util.Set;
 /**
  * <B>主类名称：</B>AttributeKey<BR>
  * <B>概要说明：</B>属性上下文的抽象类，在其内部进行实现<BR>
- * @author JiFeng
- * @since 2021年12月9日 上午10:49:36
+ * @author edan
+ * @since 2024年8月9日 上午10:49:36
  */
 public abstract class AttributeKey<T> {
 
@@ -52,8 +52,8 @@ public abstract class AttributeKey<T> {
 	/**
 	 * <B>方法名称：</B>cast<BR>
 	 * <B>概要说明：</B>给我一个对象，转成对应的class类型<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午10:51:16
+	 * @author edan
+	 * @since 2024年8月9日 上午10:51:16
 	 * @param value 真实的数据对象值
 	 * @return
 	 */
@@ -62,8 +62,8 @@ public abstract class AttributeKey<T> {
 	/**
 	 * <B>方法名称：</B>create<BR>
 	 * <B>概要说明：</B>对外暴露创建AttributeKey<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午10:58:30
+	 * @author edan
+	 * @since 2024年8月9日 上午10:58:30
 	 * @param <T>
 	 * @param valueClass 给我的对应的泛型类
 	 * @return AttributeKey -> SimpleAttributeKey
@@ -76,8 +76,8 @@ public abstract class AttributeKey<T> {
 	/**
 	 * <B>主类名称：</B>SimpleAttributeKey<BR>
 	 * <B>概要说明：</B>简单的属性Key转换类<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 上午10:55:21
+	 * @author edan
+	 * @since 2024年8月9日 上午10:55:21
 	 */
 	public static class SimpleAttributeKey<T> extends AttributeKey<T> {
 

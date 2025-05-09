@@ -6,8 +6,8 @@ import java.util.Objects;
 /**
  * <B>主类名称：</B>ServiceInstance<BR>
  * <B>概要说明：</B>服务实例：一个服务定义会对应多个服务实例<BR>
- * @author JiFeng
- * @since 2021年12月11日 上午12:32:06
+ * @author edan
+ * @since 2024年8月11日 上午12:32:06
  */
 public class ServiceInstance implements Serializable {
 

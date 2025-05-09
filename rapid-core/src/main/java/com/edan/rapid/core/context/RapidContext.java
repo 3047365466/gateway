@@ -28,8 +28,8 @@ public class RapidContext extends BasicContext{
     /**
      * <B>方法名称：</B>getRequiredAttribute<BR>
      * <B>概要说明：</B>获取必要的上下文参数，如果没有则抛出IllegalArgumentException<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:41:59
+     * @author edan
+     * @since 2024年8月9日 下午2:41:59
      * @param <T>
      * @param key 必须要存在的
      * @return T
@@ -43,8 +43,8 @@ public class RapidContext extends BasicContext{
     /**
      * <B>方法名称：</B>getAttributeOrDefault<BR>
      * <B>概要说明：</B>获取指定key的上下文参数，如果没有则返回第二个参数的默认值<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:44:23
+     * @author edan
+     * @since 2024年8月9日 下午2:44:23
      * @param <T>
      * @param key
      * @param defaultValue
@@ -58,8 +58,8 @@ public class RapidContext extends BasicContext{
     /**
      * <B>方法名称：</B>getFilterConfig<BR>
      * <B>概要说明：</B>根据过滤器id获取对应的过滤器配置信息<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:46:00
+     * @author edan
+     * @since 2024年8月9日 下午2:46:00
      * @param filterId
      * @return Rule.FilterConfig
      */
@@ -70,8 +70,8 @@ public class RapidContext extends BasicContext{
     /**
      * <B>方法名称：</B>getUniqueId<BR>
      * <B>概要说明：</B>获取上下文中唯一的UniqueId<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:46:53
+     * @author edan
+     * @since 2024年8月9日 下午2:46:53
      * @return
      */
     public String getUniqueId() {
@@ -80,8 +80,8 @@ public class RapidContext extends BasicContext{
     /**
      * <B>方法名称：</B>releaseRequest<BR>
      * <B>概要说明：</B>重写覆盖父类：basicContext的该方法，主要用于真正的释放操作<BR>
-     * @author  JiFeng
-     * @since 2021年12月9日 下午2:53:07
+     * @author  edan
+     * @since 2024年8月9日 下午2:53:07
      * @see com.edan.rapid.core.context.BasicContext#releaseRequest()
      */
     @Override
@@ -103,8 +103,8 @@ public class RapidContext extends BasicContext{
     /**
      * <B>方法名称：</B>getOriginRequest<BR>
      * <B>概要说明：</B>调用该方法就是获取原始请求内容，不去做任何修改动作<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:50:27
+     * @author edan
+     * @since 2024年8月9日 下午2:50:27
      * @return
      */
     public RapidRequest getOriginRequest() {
@@ -114,12 +114,36 @@ public class RapidContext extends BasicContext{
     /**
      * <B>方法名称：</B>getRequestMutale<BR>
      * <B>概要说明：</B>调用该方法区分于原始的请求对象操作，主要就是做属性修改的<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:49:03
+     * @author edan
+     * @since 2024年8月9日 下午2:49:03
      * @return RapidRequest
      */
     public RapidRequest getRequestMutale() {
         return rapidRequest;
+    }
+
+    /**
+     * <B>方法名称：</B>getOriginRequest<BR>
+     * <B>概要说明：</B>调用该方法就是获取客户端请求的ip，用作限流，黑名单<BR>
+     *
+     * @return
+     * @author edan
+     * @since 2024年8月9日 下午2:50:27
+     */
+    public String getClientIp() {
+        return rapidRequest.getClientIp();
+    }
+
+    /**
+     * <B>方法名称：</B>getOriginRequest<BR>
+     * <B>概要说明：</B>调用该方法就是获取请求服务实例<BR>
+     *
+     * @return
+     * @author edan
+     * @since 2024年8月9日 下午2:50:27
+     */
+    public String getRequestService() {
+        return rapidRequest.getUniqueId();
     }
 
     @Override
@@ -135,8 +159,8 @@ public class RapidContext extends BasicContext{
     /**
      * <B>主类名称：</B>Builder<BR>
      * <B>概要说明：</B>建造者类<BR>
-     * @author JiFeng
-     * @since 2021年12月9日 下午2:39:36
+     * @author edan
+     * @since 2024年8月9日 下午2:39:36
      */
     public static class Builder {
 

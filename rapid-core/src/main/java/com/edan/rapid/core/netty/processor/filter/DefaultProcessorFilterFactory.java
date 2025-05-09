@@ -4,13 +4,18 @@ import com.edan.rapid.common.util.ServiceLoader;
 import com.edan.rapid.core.context.Context;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <B>主类名称：</B>DefaultProcessorFilterFactory<BR>
  * <B>概要说明：</B>默认过滤器工厂实现类<BR>
- * @author JiFeng
- * @since 2021年12月16日 上午1:14:06
+ * @author edan
+ * @since 2024年8月16日 上午1:14:06
  */
 @Slf4j
 public class DefaultProcessorFilterFactory extends AbstractProcessorFilterFactory {
@@ -25,10 +30,10 @@ public class DefaultProcessorFilterFactory extends AbstractProcessorFilterFactor
 	
 	//	构造方法：加载所有的ProcessorFilter子类的实现
 	@SuppressWarnings("unchecked")
-	private DefaultProcessorFilterFactory(){
+		private DefaultProcessorFilterFactory()  {
 		
 		//	SPI方式加载filter的集合：
-		Map<String , List<ProcessorFilter<Context>>> filterMap = new LinkedHashMap<String, List<ProcessorFilter<Context>>>();
+		Map<String, List<ProcessorFilter<Context>>> filterMap = new LinkedHashMap<String, List<ProcessorFilter<Context>>>();
 		
 		//	通过ServiceLoader加载
 		@SuppressWarnings("rawtypes")
@@ -65,8 +70,9 @@ public class DefaultProcessorFilterFactory extends AbstractProcessorFilterFactor
 			try {
 				super.buildFilterChain(filterType, filterList);
 			} catch (Exception e) {
-				//	ignor 
+				//	ignore
 				log.error("#DefaultProcessorFilterFactory.buildFilterChain# 网关过滤器加载异常, 异常信息为：{}!",e.getMessage(), e);
+				doFilterDestroy();
 			}
 		}
 		
@@ -75,8 +81,8 @@ public class DefaultProcessorFilterFactory extends AbstractProcessorFilterFactor
 	/**
 	 * <B>方法名称：</B>doFilterChain<BR>
 	 * <B>概要说明：</B>正常过滤器链条执行：pre + route + post<BR>
-	 * @author  JiFeng
-	 * @since 2021年12月16日 上午1:48:34
+	 * @author  edan
+	 * @since 2024年8月16日 上午1:48:34
 	 * @see com.edan.rapid.core.netty.processor.filter.ProcessorFilterFactory#doFilterChain(com.edan.rapid.core.context.Context)
 	 */
 	@Override
@@ -99,8 +105,8 @@ public class DefaultProcessorFilterFactory extends AbstractProcessorFilterFactor
 	/**
 	 * <B>方法名称：</B>doErrorFilterChain<BR>
 	 * <B>概要说明：</B>异常过滤器链条执行：error + post<BR>
-	 * @author  JiFeng
-	 * @since 2021年12月16日 上午1:48:12
+	 * @author  edan
+	 * @since 2024年8月16日 上午1:48:12
 	 * @see com.edan.rapid.core.netty.processor.filter.ProcessorFilterFactory#doErrorFilterChain(com.edan.rapid.core.context.Context)
 	 */
 	@Override
@@ -111,5 +117,31 @@ public class DefaultProcessorFilterFactory extends AbstractProcessorFilterFactor
 			log.error("#DefaultProcessorFilterFactory.doErrorFilterChain# ERROR MESSAGE: {}" , e.getMessage(), e);
 		}
 	}
+
+	/**
+	 * <B>方法名称：</B>doErrorFilterChain<BR>
+	 * <B>概要说明：</B>异常过滤器链条执行：error + post<BR>
+	 * @author  edan
+	 * @since 2024年8月16日 上午1:48:12
+	 * @see com.edan.rapid.core.netty.processor.filter.ProcessorFilterFactory#doErrorFilterChain(com.edan.rapid.core.context.Context)
+	 */
+	@Override
+	public void doFilterDestroy() {
+		try {
+			AbstractLinkedProcessorFilter<Context> chain = defaultProcessorFilterChain;
+			if (chain != null) {
+				chain.destroy();
+				chain = chain.getNext();
+			}
+			AbstractLinkedProcessorFilter<Context> chain1 = errorProcessorFilterChain;
+			if (chain1 != null) {
+				chain1.destroy();
+				chain1 = chain1.getNext();
+			}
+		} catch (Throwable e) {
+			log.error("#doFilterDestroy# ERROR MESSAGE: {}" , e.getMessage(), e);
+		}
+	}
+
 	
 }

@@ -34,8 +34,8 @@ import java.util.Set;
 /**
  * <B>主类名称：</B>SpringMVCClientRegisteryManager<BR>
  * <B>概要说明：</B>Http请求的客户端注册管理器<BR>
- * @author JiFeng
- * @since 2021年12月19日 上午10:38:55
+ * @author edan
+ * @since 2024年8月19日 上午10:38:55
  */
 @Slf4j
 public class SpringMVCClientRegisteryManager extends AbstractClientRegisteryManager implements ApplicationListener<ApplicationEvent>, ApplicationContextAware  {
@@ -89,9 +89,9 @@ public class SpringMVCClientRegisteryManager extends AbstractClientRegisteryMana
 	/**
 	 * <B>方法名称：</B>registerySpringMVC<BR>
 	 * <B>概要说明：</B>解析SpringMvc的事件，进行注册<BR>
-	 * @author JiFeng
+	 * @author edan
 	 * @throws Exception 
-	 * @since 2021年12月19日 上午10:48:25
+	 * @since 2024年8月19日 上午10:48:25
 	 */
 	private void registerySpringMVC() throws Exception {
 		Map<String, RequestMappingHandlerMapping> allRequestMappings = BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, 

@@ -9,8 +9,8 @@ import java.util.Objects;
 /**
  * <B>主类名称：</B>ServiceDefinition<BR>
  * <B>概要说明：</B>资源服务定义类：无论下游是什么样的服务都需要进行注册<BR>
- * @author JiFeng
- * @since 2021年12月10日 下午11:52:17
+ * @author edan
+ * @since 2024年8月10日 下午11:52:17
  */
 @Data
 public class ServiceDefinition implements Serializable {
