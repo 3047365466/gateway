@@ -43,7 +43,7 @@ public enum ResponseCode {
     /**
      * 请求被限流
      */
-    RATE_LIMITED(HttpResponseStatus.TOO_MANY_REQUESTS, 429, "请求被限流，请稍后重试");
+    RATE_LIMITED(HttpResponseStatus.TOO_MANY_REQUESTS, 429, "服务繁忙，请稍后重试");
 
     private HttpResponseStatus status;
     private int code;
