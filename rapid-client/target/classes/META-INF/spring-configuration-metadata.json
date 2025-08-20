@@ -1,0 +1,32 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.edan.rapid.client.core.autoconfigure.RapidProperties",
+      "name": "rapid",
+      "type": "com.edan.rapid.client.core.autoconfigure.RapidProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.edan.rapid.client.core.autoconfigure.RapidProperties",
+      "defaultValue": "dev",
+      "name": "rapid.env",
+      "description": "环境属性",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.edan.rapid.client.core.autoconfigure.RapidProperties",
+      "defaultValue": "rapid",
+      "name": "rapid.namespace",
+      "description": "etcd注册命名空间",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.edan.rapid.client.core.autoconfigure.RapidProperties",
+      "name": "rapid.registry-address",
+      "description": "etcd注册中心地址",
+      "type": "java.lang.String"
+    }
+  ]
+}

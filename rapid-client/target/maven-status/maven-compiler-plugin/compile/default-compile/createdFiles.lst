@@ -1,0 +1,13 @@
+com\edan\rapid\client\support\dubbo\Dubbo27ClientRegisteryManager.class
+com\edan\rapid\client\core\autoconfigure\RapidProperties.class
+com\edan\rapid\client\core\AbstractClientRegisteryManager.class
+com\edan\rapid\client\core\RapidAnnotationScanner$1.class
+com\edan\rapid\client\RapidService.class
+com\edan\rapid\client\support\springmvc\SpringMVCClientRegisteryManager.class
+com\edan\rapid\client\support\dubbo\DubboConstants.class
+META-INF\spring-configuration-metadata.json
+com\edan\rapid\client\RapidInvoker.class
+com\edan\rapid\client\core\autoconfigure\RapidClientAutoConfiguration.class
+com\edan\rapid\client\core\RapidAnnotationScanner$SingletonHolder.class
+com\edan\rapid\client\RapidProtocol.class
+com\edan\rapid\client\core\RapidAnnotationScanner.class

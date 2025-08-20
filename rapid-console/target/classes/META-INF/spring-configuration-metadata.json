@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "rapid.console",
+      "type": "com.edan.rapid.console.RapidConsoleProperties",
+      "sourceType": "com.edan.rapid.console.RapidConsoleProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rapid.console.consumer-num",
+      "type": "java.lang.Integer",
+      "sourceType": "com.edan.rapid.console.RapidConsoleProperties"
+    },
+    {
+      "name": "rapid.console.group-id",
+      "type": "java.lang.String",
+      "sourceType": "com.edan.rapid.console.RapidConsoleProperties"
+    },
+    {
+      "name": "rapid.console.kafka-address",
+      "type": "java.lang.String",
+      "sourceType": "com.edan.rapid.console.RapidConsoleProperties"
+    },
+    {
+      "name": "rapid.console.namespace",
+      "type": "java.lang.String",
+      "sourceType": "com.edan.rapid.console.RapidConsoleProperties"
+    },
+    {
+      "name": "rapid.console.registry-address",
+      "type": "java.lang.String",
+      "sourceType": "com.edan.rapid.console.RapidConsoleProperties"
+    },
+    {
+      "name": "rapid.console.topic-name-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.edan.rapid.console.RapidConsoleProperties"
+    }
+  ],
+  "hints": []
+}
